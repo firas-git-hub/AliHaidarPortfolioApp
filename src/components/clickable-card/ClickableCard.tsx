@@ -1,15 +1,31 @@
 import './ClickableCard.scss';
+import React, { useEffect } from 'react';
 
-export default function ClickableCard() {
+export interface ClickableCardProps {
+    cardImagePath?: string;
+    cardHeader: string;
+    cardDescription: string;
+    routerPath?: string;
+    navigateOnClick?: Function;
+}
+
+const ClickableCard: React.FunctionComponent<ClickableCardProps> = (props) => {
+
+    const cardClicked = () => {
+        props.navigateOnClick ? props.navigateOnClick() : null;
+    }
+
     return <>
-        <div className="card-container">
+        <div className="card-container card-box" onClick={() => cardClicked()}>
             <div className="card-image">
-                <img src="icons/facebook.png" />
+                <img src={props.cardImagePath} />
             </div>
             <div className="card-content">
-                <p className="card-content__header">About me</p>
-                <p className="card-content__description">No in he real went find mr. Wandered or strictly raillery stanhill as. Jennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now how nay cold real case.</p>
+                <p className="card-content__header color--blue">{props.cardHeader}</p>
+                <p className="card-content__description">{props.cardDescription}</p>
             </div>
         </div>
     </>
 }
+
+export default ClickableCard;

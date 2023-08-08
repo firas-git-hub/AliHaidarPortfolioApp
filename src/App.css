@@ -13,7 +13,7 @@ body,
 }
 
 .App {
-	background: linear-gradient(180deg, rgb(0 221 255 / 72%) 0%, rgba(135, 232, 255, 0.5326505602240896) 93%);
+	background: linear-gradient(180deg, rgba(31, 117, 254, 1) 0%, rgba(102, 164, 254, 1) 25%, rgba(175, 213, 255, 1) 71%, rgba(199, 229, 255, 1) 87%, rgba(215, 236, 255, 1) 98%);
 	height: 100%;
 	text-align: center;
 	overflow-y: auto;
@@ -44,4 +44,35 @@ img {
 	.App-logo {
 		animation: App-logo-spin infinite 20s linear;
 	}
+}
+
+.card-box {
+	background: rgba(255, 255, 255, 0.28);
+	border-radius: 0.5rem;
+	box-shadow: 0 0.25rem 30px rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(3.4px);
+	backdrop-filter: blur(3.4px);
+	text-align: start;
+	padding: 1.5rem;
+	height: fit-content;
+}
+
+.color--blue {
+	color: #277afe;
+}
+
+.flex--row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex--column {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-background-img {
+	background-image: url("../public/images/TopViewBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

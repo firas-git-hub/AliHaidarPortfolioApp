@@ -1,22 +1,48 @@
 import "./TopView.scss";
+import React from "react";
+import data from "../../data/topViewCardsData.json";
+import { useTranslation } from "react-i18next";
 
-export default function TopView() {
+export interface ITopViewProps {
+    header?: string;
+    subTitle?: string;
+    descriptionList?: { cardHeader: string, cardDescription: string }[];
+}
+
+const TopView: React.FunctionComponent<{}> = () => {
+
+    const { t } = useTranslation();
+
+    let cardBoxesData: ITopViewProps = data;
     return <>
-        <div className="topview-container">
+        <div className="topview-container main-background-img">
             <div className="topview-container__info">
-                <p className="topview-container__info__header bold">
-                    Ali Haidar Md
-                </p>
-                <p className="topview-container__info__title">
-                    About me
-                </p>
-                <p className="topview-container__info__description">
-                    No in he real went find mr. Wandered or strictly raillery stanhill as. Jennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now how nay cold real case.
-                </p>
+                <div className="card-box">
+                    <p className="topview-container__info__header bold">
+                        {t("topviewHeader")}
+                    </p>
+                    <p className="topview-container__info__title color--blue">
+                        {t("topviewTitle")}
+                    </p>
+                </div>
+                <div className="differently-sized-boxes">
+                    {
+                        cardBoxesData.descriptionList!.map((element, index) => {
+                            return (
+                                <p key={index} className={"topview-container__info__description card-box " + "box" + (index + 1).toString()}>
+                                    <span className="header color--blue">{element.cardHeader}</span>
+                                    <span className="description">{element.cardDescription}</span>
+                                </p>
+                            );
+                        })
+                    }
+                </div>
             </div>
             <div className="img-container">
-                <img src="images/doctorPortrait.png" />
+                <img src="images/AliHaidarPortrait.png" />
             </div>
         </div>
     </>
 }
+
+export default TopView;

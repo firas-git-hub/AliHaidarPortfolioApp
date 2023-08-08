@@ -1,0 +1,35 @@
+.services {
+    padding: 2rem;
+    gap: 1rem;
+    height: 100%;
+    flex-shrink: 0;
+
+    .card-box {
+        width: fit-content;
+    }
+
+    .services__header {
+        font-size: 4rem;
+    }
+
+    .services__description {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .services__body {
+        gap: 1rem;
+    }
+
+    .services-item {
+        gap: 1.5rem;
+        width: 100%;
+        .header {
+            font-size: 2rem;
+        }
+
+        .description {
+
+        }
+    }
+}

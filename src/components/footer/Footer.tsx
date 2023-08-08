@@ -1,6 +1,9 @@
 import './Footer.scss';
+import React from 'react';
 
-export default function NavBar() {
+export interface IFooterProps {}
+
+const Footer: React.FunctionComponent<IFooterProps> = (props) => {
 
     return <>
         <div className="footer">
@@ -18,3 +21,5 @@ export default function NavBar() {
         </div>
     </>
 }
+
+export default Footer;

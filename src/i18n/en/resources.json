@@ -1,0 +1,16 @@
+{
+    "en": {
+        "translation": {
+            "topviewHeader": "Ali Haidar Md",
+            "topviewTitle": "About me",
+            "navbarText": "Ali Haidar Md",
+            "notFound": "Not Found",
+            "notFoundMsg": "Error 404: Page not found",
+            "servicesHeader": "Services",
+            "servicesDescription": "These are the services we offer",
+            "consultations": "Consultations",
+            "psychotherapy": "Psychotherapy",
+            "medicationManagement": "Medication Management"
+        }
+    }
+}

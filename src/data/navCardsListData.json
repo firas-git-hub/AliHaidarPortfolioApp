@@ -1,0 +1,32 @@
+[
+    {
+        "cardImagePath": "/icons/home.png",
+        "cardHeader": "Home",
+        "cardDescription": "Navigate to the home page and make yourself at home.",
+        "routerPath": "/"
+    },
+    {
+        "cardImagePath": "/icons/services.png",
+        "cardHeader": "Services",
+        "cardDescription": "Check out the services offered for a better mental health and a better lifestyle.",
+        "routerPath": "/services"
+    },
+    {
+        "cardImagePath": "/icons/policiesregulations.png",
+        "cardHeader": "Policies and regulations",
+        "cardDescription": "Through this page you will be able to see the policies and regulations we use to make this space and our practice safe for everyoe involved.",
+        "routerPath": "/policiesregulations"
+    },
+    {
+        "cardImagePath": "/icons/contactinfo.png",
+        "cardHeader": "Contact Info",
+        "cardDescription": "All the info you need to make contact with our clinic. Please reach out in case you have any questions on the communication means provided.",
+        "routerPath": "/contactinfo"
+    },
+    {
+        "cardImagePath": "/icons/returningpatients.png",
+        "cardHeader": "Returning patients",
+        "cardDescription": "Feel free to reach out to us whenever you feel like you're ready. Dont be hesistant to ask for a consultation.",
+        "routerPath": "/returningpatients"
+    }
+]

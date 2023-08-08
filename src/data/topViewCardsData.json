@@ -1,0 +1,30 @@
+{
+    "header": "Ali Haiddar MD",
+    "subTitle": "About Me",
+    "descriptionList": [
+        {
+            "cardHeader": "Education",
+            "cardDescription": "Ali received his Bachelor of Science magna cum laude and his medical degree from the American University of Beirut in Lebanon."
+        },
+        {
+            "cardHeader": "Journey",
+            "cardDescription": "Prior to residency he contributed to national policies and guidelines serving refugees and underserved populations of Lebanon. He also served as an intern at the World Health Organization in Geneva, Switzerland where he contributed to the Mental Health Gap Action Plan."
+        },
+        {
+            "cardHeader": "Education",
+            "cardDescription": "He completed his psychiatry residency at SUNY Downstate and a Child and Adolescent Psychiatry Fellowship at Mount Sinai where he served as Chief fellow."
+        },
+        {
+            "cardHeader": "Interests",
+            "cardDescription": "His interests include public psychiatry, psychotherapy, and cultural psychiatry. He sees a diverse group of patients with focus on: Psychotherapy, Immigration, displacement and political turmoil's effect on the Psyche."
+        },
+        {
+            "cardHeader": "Education",
+            "cardDescription": "He has pursued additional training in Child and Adolescent Psychodynamic Psychotherapy at Columbia University's Psychoanalytic Center and is currently a candidate in Adult Psychoanalysis certification at the William Alanson White Institute."
+        },
+        {
+            "cardHeader": "Personal message",
+            "cardDescription": "I would like to praise you for taking the first step to take care of your mental health."
+        }
+    ]
+}

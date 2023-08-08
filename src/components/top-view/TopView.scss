@@ -2,16 +2,15 @@
     display: flex;
     flex-direction: row;
     align-content: space-between;
-    height: 100vh;
-    background: linear-gradient(90deg, rgba(107, 134, 241, 1) 0%, rgba(61, 177, 189, 0.9136029411764706) 43%, rgba(0, 212, 255, 0.8799894957983193) 100%);
+    min-height: 100vh;
 
     .topview-container__info {
         flex: 1;
-        margin-inline: 1rem;
         text-align: start;
-        height: 100%;
         display: flex;
         flex-direction: column;
+        margin: 2rem;
+        gap: 1rem;
 
         .topview-container__info__header {
             font-size: 5rem;
@@ -22,11 +21,18 @@
         }
 
         .topview-container__info__description {
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            line-height: 5rem;
+            height: auto;
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .description {
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                line-height: 1.75rem;
+            }
         }
     }
 
@@ -39,6 +45,39 @@
 
         img {
             justify-content: center;
+        }
+    }
+
+    .differently-sized-boxes {
+        display: grid;
+        grid-template: 
+        "box1 box1 box1 box2"
+        "box3 box3 box3 box2"
+        "box4 box4 box5 box5"
+        "box6 box6 box6 box6";
+        gap: 1rem;
+
+        .box1 {
+            grid-area: box1;
+        }
+        .box2 {
+            grid-area: box2;
+        }
+        .box3 {
+            grid-area: box3;
+        }
+        .box4 {
+            grid-area: box4;
+        }
+        .box5 {
+            grid-area: box5;
+        }
+        .box6 {
+            grid-area: box6;
+        }
+
+        &>* {
+            justify-self: stretch;
         }
     }
 }
