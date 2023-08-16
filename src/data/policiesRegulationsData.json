@@ -1,0 +1,84 @@
+[
+    {
+        "title": "paymentAndFees",
+        "paragraphs": [
+            {
+                "content": "Payment is due on the day of service, unless we make an alternative arrangement. You can pay by credit card via Luminello. For the details of the fees, you will be provided a current fee schedule.",
+                "paragraphListType": ""
+            },
+            {
+                "content": "Please note you are responsible for submitting the documents requested by insurance, seeking reimbursement.  If you are a Medicare recipient, I cannot provide treatment to you due to the restrictions Medicare places on self-pay arrangements. It is your responsibility to inform me of the fact that you are a Medicare recipient.",
+                "paragraphListType": ""
+            }
+        ]
+    },
+    {
+        "title": "visitFrequency",
+        "paragraphs": [
+            {
+                "content": "All patients will need to have routine follow-up visits of at least once every 3 months. Patients who are prescribed a controlled substance will require a follow-up visit frequency of at least once every month.",
+                "paragraphListType": ""
+            }
+        ]
+    },
+    {
+        "title": "lateNoShowCancellationPolicy",
+        "paragraphs": [
+            {
+                "content": "Appointments will begin and end at the scheduled time.  Patients arriving late to a scheduled appointment will be seen during the designated appointment slot and as such, may be seen for less than was originally scheduled. The session will be billed for the scheduled time. Full fee will be charged for missed appointments unless you call at least 24 hours, (not including weekends or holidays) ahead to reschedule.",
+                "paragraphListType": ""
+            }
+        ]
+    },
+    {
+        "title": "medications",
+        "paragraphs": [
+            {
+                "content": "Please note that I will only prescribe once I have completed an evaluation and we have established a physician-patient relationship.",
+                "paragraphListType": ""
+            },
+            {
+                "content": "Medication refills should be handled during scheduled appointments. If the patient discovers they will run out of medications prior to their scheduled appointment, they should contact me to call in a refill.",
+                "paragraphListType": ""
+            },
+            {
+                "content": "For patients who are seen predominantly for medication management, it is important to have an appointment in order to renew medication. In some situations, I may prescribe a small supply of medication that will last until the next scheduled visit.",
+                "paragraphListType": ""
+            }
+        ]
+    },
+    {
+        "title": "commOutsideOfficeVisits",
+        "paragraphs": [
+            {
+                "content": "Routine messages will be answered within a business day. For urgent matters that cannot wait or for matters after 6PM and before 7AM, you should call 911 or proceed to your nearest emergency room. When I am away, you will be provided with the name and contact information of the covering psychiatrist.",
+                "paragraphListType": ""
+            },
+            {
+                "content": "E-mail or text message should only be used for administrative purposes such as scheduling and not for clinical purposes (side effects, symptom changes).",
+                "paragraphListType": ""
+            }
+        ]
+    },
+    {
+        "title": "confidentiality",
+        "paragraphs": [
+            {
+                "content": "I will not discuss any details of your treatment without your written permission. You may revoke this permission in writing at any time. The legal exceptions to this confidentiality include, but are not limited to, the following:",
+                "paragraphListType": ""
+            },
+            {
+                "content": "There is good reason to believe a patient is at risk of serious harm to themselves or others. 2. There is good reason to suspect abuse and/or neglect towards children, the elderly, or disabled persons.",
+                "paragraphListType": "numbered"
+            },
+            {
+                "content": "A court order may subpoena a medical record.",
+                "paragraphListType": "numbered"
+            },
+            {
+                "content": "In the case of a medical emergency, a treating psychiatrist may provide necessary information to the treating medical party.",
+                "paragraphListType": "numbered"
+            }
+        ]
+    }
+]

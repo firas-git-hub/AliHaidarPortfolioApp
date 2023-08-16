@@ -10,7 +10,19 @@
             "servicesDescription": "These are the services we offer",
             "consultations": "Consultations",
             "psychotherapy": "Psychotherapy",
-            "medicationManagement": "Medication Management"
+            "medicationManagement": "Medication Management",
+            "policiesRegulationsHeader":"Policies & Regulations",
+            "policiesRegulationsDescription":"All you need to know about how we do things at our clinic",
+            "contactInfoHeader": "Contact Info",
+            "contactInfoDescription": "Feel free to contact us whenever you are ready",
+            "returningPatientsHeader": "Returning Patients",
+            "returningPatientsDescription": "A safe space for you",
+            "paymentAndFees": "Payments and fees",
+            "visitFrequency": "Visit Frequency",
+            "lateNoShowCancellationPolicy": "Late, no show, cancelation policy",
+            "medications": "Medications",
+            "commOutsideOfficeVisits": "Communication Outside Of Office Visits",
+            "confidentiality": "Confidentiality"
         }
     }
 }

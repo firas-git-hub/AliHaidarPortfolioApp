@@ -1,6 +1,8 @@
 .not-found {
     text-align: start;
     padding: 2rem;
+    height: 100%;
+    flex-shrink: 0;
 
     h1 {
         font-size: 5rem;

@@ -1,7 +1,7 @@
 import './Services.scss';
 import React from "react";
 import { useTranslation } from "react-i18next";
-import data from "../../data/servicesOfferedList.json";
+import data from "../../data/servicesOfferedListData.json";
 
 export interface IServicesProps { };
 export interface IServicesItem {
@@ -16,15 +16,13 @@ const Services: React.FunctionComponent<IServicesProps> = (props) => {
 
     return (
         <div className="flex--column services main-background-img">
-            <div className="card-box flex--row">
-                <div className="flex--column">
-                    <p className="services__header bold">
-                        {t("servicesHeader")}
-                    </p>
-                    <p className="services__description color--blue">
-                        {t("servicesDescription")}
-                    </p>
-                </div>
+            <div className="flex--column card-box">
+                <p className="services__header bold">
+                    {t("servicesHeader")}
+                </p>
+                <p className="services__description color--blue">
+                    {t("servicesDescription")}
+                </p>
             </div>
             <div className="services__body flex--column">
                 {

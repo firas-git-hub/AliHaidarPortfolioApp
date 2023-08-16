@@ -1,0 +1,38 @@
+.policies-regulations {
+    padding: 2rem;
+    gap: 1rem;
+    height: 100%;
+    flex-shrink: 0;
+
+    .card-box {
+        width: fit-content;
+        overflow: auto;
+    }
+
+    .policies-regulations__header {
+        font-size: 4rem;
+    }
+
+    .policies-regulations__description {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .policies-regulations__body {
+        flex: 1;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .policies-regulations-item {
+        gap: 1.5rem;
+        width: 100%;
+
+        .header {
+            font-size: 2rem;
+        }
+
+        .description {}
+    }
+}
