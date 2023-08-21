@@ -39,7 +39,11 @@ const TopView: React.FunctionComponent<{}> = () => {
                 </div>
             </div>
             <div className="img-container">
-                <img src="images/AliHaidarPortrait2.png" />
+                <div className="portrait-img-container">
+                    <img className="portrait" src="images/AliHaidarPortrait2.png" />
+                </div>
+                <img className="background-1" src="images/headshotBackgroundTriangles2.png" />
+                <img className="background-2" src="images/headshotBackgroundTriangles2.png" />
             </div>
         </div>
     </>

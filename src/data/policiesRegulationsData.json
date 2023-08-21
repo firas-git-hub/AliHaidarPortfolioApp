@@ -35,15 +35,15 @@
         "paragraphs": [
             {
                 "content": "Please note that I will only prescribe once I have completed an evaluation and we have established a physician-patient relationship.",
-                "paragraphListType": ""
+                "paragraphListType": "numbered"
             },
             {
                 "content": "Medication refills should be handled during scheduled appointments. If the patient discovers they will run out of medications prior to their scheduled appointment, they should contact me to call in a refill.",
-                "paragraphListType": ""
+                "paragraphListType": "numbered"
             },
             {
                 "content": "For patients who are seen predominantly for medication management, it is important to have an appointment in order to renew medication. In some situations, I may prescribe a small supply of medication that will last until the next scheduled visit.",
-                "paragraphListType": ""
+                "paragraphListType": "numbered"
             }
         ]
     },
@@ -68,7 +68,11 @@
                 "paragraphListType": ""
             },
             {
-                "content": "There is good reason to believe a patient is at risk of serious harm to themselves or others. 2. There is good reason to suspect abuse and/or neglect towards children, the elderly, or disabled persons.",
+                "content": "There is good reason to believe a patient is at risk of serious harm to themselves or others.",
+                "paragraphListType": "numbered"
+            },
+            {
+                "content": "There is good reason to suspect abuse and/or neglect towards children, the elderly, or disabled persons.",
                 "paragraphListType": "numbered"
             },
             {

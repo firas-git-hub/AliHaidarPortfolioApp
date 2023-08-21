@@ -14,6 +14,7 @@ const PoliciesRegulations: React.FunctionComponent<IPoliciesRegulationsProps> = 
 
     const { t } = useTranslation();
     const policiesRegulationsList: IPoliciesRegulationsItem[] = data;
+    let numberedListItemCounterObj = {index: 1};
 
     return (
         <div className="policies-regulations flex--column main-background-img">
@@ -27,13 +28,17 @@ const PoliciesRegulations: React.FunctionComponent<IPoliciesRegulationsProps> = 
             </div>
             <div className="card-box policies-regulations__body">
                 {
-                    data.map((item, index) => {
-                        return <div key={index}>
-                            <p>{item.title}</p>
+                    policiesRegulationsList.map((item, index) => {
+                        return <div key={index} className="policies-regulations-item flex--column">
+                            <p className="policies-regulations-item__title color--blue">{t(item.title)}</p>
                             {
-                                item.paragraphs.map((item, index) => {
-                                    return <p key={index}>
-                                        {item.paragraphListType + " " + item.content}
+                                item.paragraphs.map((subItem, index) => {
+                                    return <p key={index} className="policies-regulations-item__paragraph">
+                                        {
+                                            getListSymbol(subItem.paragraphListType, numberedListItemCounterObj) +
+                                            " " +
+                                            subItem.content
+                                        }
                                     </p>
                                 })
                             }
@@ -43,6 +48,27 @@ const PoliciesRegulations: React.FunctionComponent<IPoliciesRegulationsProps> = 
             </div>
         </div>
     )
+}
+
+//I passed the index as object so the argument taken by the unction would be taken by reference. this means that i can change the object through the function.
+const getListSymbol = (paragraphListType: string, listSubitemIndexObj: {index: number}): string => {
+    let returnVal = "";
+    if (paragraphListType == "numbered") {
+        returnVal = listSubitemIndexObj.index + ".";
+        listSubitemIndexObj.index += 1;
+    }
+    else if (paragraphListType == "bulletPoint") {
+        returnVal = "\u2022";
+    }
+    else if (paragraphListType == "bulletPoint") {
+        returnVal = "\u2022";
+    }
+    
+    else {
+        listSubitemIndexObj.index = 1;
+        returnVal = paragraphListType;
+    }
+    return returnVal;
 }
 
 export default PoliciesRegulations;

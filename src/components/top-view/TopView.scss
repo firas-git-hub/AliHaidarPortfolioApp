@@ -14,11 +14,11 @@
         gap: 1rem;
 
         .topview-container__info__header {
-            font-size: 5rem;
+            font-size: 3rem;
         }
 
         .topview-container__info__title {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         .topview-container__info__description {
@@ -39,44 +39,93 @@
 
     .img-container {
         flex: 1;
-        flex-grow: 0.8;
+        flex-grow: 0.5;
         height: 100%;
         justify-content: center;
         display: flex;
         align-items: end;
+        position: relative;
+        overflow: hidden;
 
         img {
             justify-content: center;
+            position: absolute;
+        }
+
+        .portrait-img-container {
+            border-radius: 50%;
+            align-self: center;
+            z-index: 2;
+            overflow: hidden;
+            background-repeat: round;
+            border: 0.25rem solid #d1dfe8;
+            padding-top: 20%;
+            background-image: url("../../../public/images/portraitimgbackground.png");
+
+            img.portrait {
+                position: relative;
+            }
+        }
+
+
+        img.background-1 {
+            z-index: 1;
+            right: 0;
+            top: 0;
+        }
+
+        img.background-2 {
+            z-index: 1;
+            left: 0;
+            bottom: 0;
+            rotate: 180deg;
         }
     }
 
     .differently-sized-boxes {
         display: grid;
-        grid-template: 
-        "box1 box1 box1 box2"
-        "box3 box3 box3 box2"
-        "box4 box4 box5 box5"
-        "box6 box6 box6 box6";
+        grid-template:
+            "box3 box3 box3 box5"
+            "box2 box2 box7 box5"
+            "box4 box4 box4 box8"
+            "box6 box6 box1 box1";
         gap: 1rem;
         height: 100%;
+
+        .card-box {
+            padding: 1rem;
+        }
 
         .box1 {
             grid-area: box1;
         }
+
         .box2 {
             grid-area: box2;
         }
+
         .box3 {
             grid-area: box3;
         }
+
         .box4 {
             grid-area: box4;
         }
+
         .box5 {
             grid-area: box5;
         }
+
         .box6 {
             grid-area: box6;
+        }
+
+        .box7 {
+            grid-area: box7;
+        }
+
+        .box8 {
+            grid-area: box8;
         }
 
         &>* {

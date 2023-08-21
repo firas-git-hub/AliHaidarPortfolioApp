@@ -1,16 +1,16 @@
 {
     "en": {
         "translation": {
-            "topviewHeader": "Ali Haidar Md",
+            "topviewHeader": "Ali Haidar MD",
             "topviewTitle": "About me",
-            "navbarText": "Ali Haidar Md",
+            "navbarText": "Ali Haidar MD",
             "notFound": "Not Found",
             "notFoundMsg": "Error 404: Page not found",
             "servicesHeader": "Services",
             "servicesDescription": "These are the services we offer",
             "consultations": "Consultations",
             "psychotherapy": "Psychotherapy",
-            "medicationManagement": "Medication Management",
+            "psychopharmacology": "Psychopharmacology",
             "policiesRegulationsHeader":"Policies & Regulations",
             "policiesRegulationsDescription":"All you need to know about how we do things at our clinic",
             "contactInfoHeader": "Contact Info",
