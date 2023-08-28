@@ -2,14 +2,21 @@ import React from "react";
 import './ContactInfo.scss';
 import { useTranslation } from "react-i18next";
 import data from "../../data/contactInfoData.json";
+import { Chip } from "@mui/material";
 
-export interface IContactInfoProps {};
+export interface IContactInfoProps {
+    name: string;
+    occupation: string;
+    email: string;
+    address: string;
+    phone: string;
+};
 
-const ContactInfo: React.FunctionComponent<IContactInfoProps> = (props) => {
+const ContactInfo: React.FunctionComponent<{}> = () => {
 
     const { t } = useTranslation();
-    const contactInfoList = data;
-    
+    const contactInfoData: IContactInfoProps = data;
+
     return (
         <div className="contact-info flex--column main-background-img">
             <div className="flex--column card-box">
@@ -20,8 +27,25 @@ const ContactInfo: React.FunctionComponent<IContactInfoProps> = (props) => {
                     {t("contactInfoDescription")}
                 </p>
             </div>
-            <div className="card-box under-construction">
-                <img src="/icons/underconstruction.png" />
+            <div className="card-box contact-info__body">
+                <div className="card-box contact-info__body__item">
+                    <img src="icons/doctoricon256x256.png" />
+                    <div className="item-text-content-wrapper">
+                        <Chip label={contactInfoData.name} />
+                        <Chip label={contactInfoData.occupation} />
+                    </div>
+                </div>
+                <div className="card-box contact-info__body__item">
+                    <img src="icons/locationicon256x256.png" />
+                    <Chip label={contactInfoData.address} clickable component="a" target="_blank" href="https://www.google.com/maps/search/?api=1&query=40.7097633,-74.0078967" />
+                </div>
+                <div className="card-box contact-info__body__item white-space--nowrap">
+                    <img src="icons/phoneicon256x256.png" />
+                    <div className="item-text-content-wrapper">
+                        <Chip label={contactInfoData.phone} clickable component="a" href={"tel:" + contactInfoData.phone.toString()} />
+                        <Chip label={contactInfoData.email} clickable component="a" href={"mailto:" + contactInfoData.email.toString()} />
+                    </div>
+                </div>
             </div>
         </div>
     )

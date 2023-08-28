@@ -3,36 +3,22 @@
     "subTitle": "About Me",
     "descriptionList": [
         {
-            "cardHeader": "Education",
-            "cardDescription": "I received his Bachelor of Science magna cum laude and his medical degree from the American University of Beirut in Lebanon."
+            "cardDescription": "Dr. Haidar received his Bachelor of Science magna cum laude and medical degree from the American University of Beirut in Lebanon. He completed his psychiatry residency at SUNY Downstate and a Child and Adolescent Psychiatry Fellowship at Mount Sinai Hospital where he served as Chief Fellow before joining the faculty as a child and adolescent psychiatrist. He has also completed the Child and Adolescent Psychodynamic Psychotherapy training program at Columbia University Center for Psychoanalytic Training and Research and is currently a candidate for Adult Psychoanalysis Certification at the William Alanson White Institute."
         },
         {
-            "cardHeader": "Journey",
-            "cardDescription": "Prior to residency he contributed to national policies and guidelines serving refugees and underserved populations of Lebanon. He also served as an intern at the World Health Organization in Geneva, Switzerland where he contributed to the Mental Health Gap Action Plan."
+            "cardDescription": "Prior to residency, Dr Haidar contributed to national policies and guidelines serving refugees and underserved populations of Lebanon. He also served as an intern at the World Health Organization in Geneva, Switzerland where he contributed to the Mental Health Gap Action Plan. Dr Haidar was an invited speaker at national professional psychiatric meetings and continues to contribute on several national psychiatric committees.  He most recently served as the medical director of the child and adolescent outpatient program at the Mount Sinai Hospital."
         },
         {
-            "cardHeader": "Education",
-            "cardDescription": "I completed his psychiatry residency at SUNY Downstate and a Child and Adolescent Psychiatry Fellowship at Mount Sinai where he served as Chief fellow."
+            "cardDescription": "Currently, he continues to teach residents and fellows at the Mount Sinai Hospital where he serves as an Assistant Clinical professor of psychiatry and lectures on Global Mental Health within the MPH program at Icahn school of Medicine. He is a member of the American psychiatric Association’s council on Global Health and International psychiatry and a member of the American Psychoanalytic Association (APsaA)’s Fellowship selection committee."
         },
         {
-            "cardHeader": "Interests",
-            "cardDescription": "My interests include public psychiatry, psychotherapy, and cultural psychiatry. He sees a diverse group of patients with focus on: Psychotherapy, Immigration, displacement and political turmoil's effect on the Psyche."
-        },
-        {
-            "cardHeader": "Education",
-            "cardDescription": "I have pursued additional training in Child and Adolescent Psychodynamic Psychotherapy at Columbia University's Psychoanalytic Center and is currently a candidate in Adult Psychoanalysis certification at the William Alanson White Institute."
-        },
-        {
-            "cardHeader": "Achievement",
-            "cardDescription": "I have held several leadership positions at national organizations and served as the medical director of the child and adolescent outpatient program at the Mount Sinai Hospital."
-        },
-        {
-            "cardHeader": "Current Plans",
-            "cardDescription": "I continue to serve as Assistant Professor of Clinical Psychiatry and teach residents and fellows at the Mount Sinai Hospital and Icahn School of Medicine at Mount Sinai."
-        },
-        {
-            "cardHeader": "Personal message",
-            "cardDescription": "I would like to praise you for taking the first step to take care of your mental health."
+            "cardDescription": [
+                "Dr Haidar has earned numerous awards for patient care and clinical leadership and held national positions including: ",
+                "Alpha Omega Alpha Honor Society",
+                "American Psychoanalytic Association Fellowship",
+                "American Psychiatric Association (APA)/ APA Foundation (APAF) Leadership Fellowship",
+                "Nyapati Rao and Francis Lu International Medical Graduate (IMG) Fellowship Award- American Association of Directors of Psychiatry Residency Training"
+            ]
         }
     ]
 }

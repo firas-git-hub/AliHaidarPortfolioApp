@@ -23,16 +23,23 @@
 
         .topview-container__info__description {
             height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
 
-            .title {
-                font-size: 1.5rem;
-            }
+            // .header {
+            //     font-size: 1.5rem;
+            // }
 
             .description {
                 font-size: 1rem;
                 display: flex;
                 align-items: center;
                 line-height: 1.75rem;
+            }
+
+            .description--list {
+                gap: 1rem;
             }
         }
     }
@@ -85,10 +92,9 @@
     .differently-sized-boxes {
         display: grid;
         grid-template:
-            "box3 box3 box3 box5"
-            "box2 box2 box7 box5"
-            "box4 box4 box4 box8"
-            "box6 box6 box1 box1";
+            "box1 box1 box1 box4"
+            "box2 box2 box2 box4"
+            "box3 box3 box3 box3";
         gap: 1rem;
         height: 100%;
 
@@ -110,22 +116,6 @@
 
         .box4 {
             grid-area: box4;
-        }
-
-        .box5 {
-            grid-area: box5;
-        }
-
-        .box6 {
-            grid-area: box6;
-        }
-
-        .box7 {
-            grid-area: box7;
-        }
-
-        .box8 {
-            grid-area: box8;
         }
 
         &>* {

@@ -11,9 +11,11 @@ import NotFound from './pages/notFound/NotFound';
 import Services from './pages/services/Services';
 import ContactInfo from './pages/contactInfo/ContactInfo';
 import PoliciesRegulations from './pages/policiesRegulations/PoliciesRegulations';
-import ReturningPatients from './pages/returningPatients/ReturningPatients';
+import ReturningPatients from './pages/feesPayments/FeesPayments';
 import data from "./data/navCardsListData.json"
 import { useLocation, useNavigate } from "react-router-dom";
+import NewPatients from './pages/newpatients/NewPatients';
+import FeesPayments from './pages/feesPayments/FeesPayments';
 
 
 function App() {
@@ -40,7 +42,8 @@ function App() {
 				<Route path="/services" element={<Services />} />
 				<Route path="/contactinfo" element={<ContactInfo />} />
 				<Route path="/policiesregulations" element={<PoliciesRegulations />} />
-				<Route path="/returningpatients" element={<ReturningPatients />} />
+				<Route path="/feespayments" element={<FeesPayments />} />
+				<Route path="/newpatients" element={<NewPatients />} />
 			</Routes>
 			<div className="app-content">
 				{navCardsList.map((navCard: ClickableCardProps, index) =>

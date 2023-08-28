@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 export interface ITopViewProps {
     header?: string;
     subTitle?: string;
-    descriptionList?: { cardHeader: string, cardDescription: string }[];
+    descriptionList?: { cardDescription: string | string[] }[];
 }
 
 const TopView: React.FunctionComponent<{}> = () => {
@@ -29,10 +29,12 @@ const TopView: React.FunctionComponent<{}> = () => {
                     {
                         cardBoxesData.descriptionList!.map((element, index) => {
                             return (
-                                <p key={index} className={"topview-container__info__description card-box " + "box" + (index + 1).toString()}>
-                                    <span className="header color--blue">{element.cardHeader}</span>
-                                    <span className="description">{element.cardDescription}</span>
-                                </p>
+                                <div key={index} className={"topview-container__info__description card-box " + "box" + (index + 1).toString()}>
+                                    {/* <span className="header color--blue">{element.cardHeader}</span> */}
+                                    {
+                                        formatElement(element)
+                                    }
+                                </div>
                             );
                         })
                     }
@@ -47,6 +49,26 @@ const TopView: React.FunctionComponent<{}> = () => {
             </div>
         </div>
     </>
+}
+
+const formatElement = (element: { cardDescription: string[] | string }): JSX.Element => {
+    if (typeof (element.cardDescription) == "string") {
+        return <span className="description">
+            {
+                element.cardDescription
+            }
+        </span>
+    }
+    else if (Array.isArray(element.cardDescription)) {
+        return (
+            <>
+                {
+                    element.cardDescription.map((item, index) => <span key={index} className="description">{item}</span>)
+                }
+            </>
+        )
+    }
+    return <></>
 }
 
 export default TopView;

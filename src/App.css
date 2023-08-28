@@ -116,3 +116,7 @@ img {
 ::-webkit-scrollbar-thumb:hover {
 	background: rgb(36, 103, 211, 0.75);
 }
+
+.white-space--nowrap {
+	white-space: nowrap;
+}

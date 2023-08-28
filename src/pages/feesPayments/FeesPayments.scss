@@ -1,4 +1,4 @@
-.returning-patients {
+.fees-payments {
     padding: 2rem;
     gap: 1rem;
     height: 100%;
@@ -8,20 +8,20 @@
         width: fit-content;
     }
 
-    .returning-patients__header {
+    .fees-payments__header {
         font-size: 3rem;
     }
 
-    .returning-patients__description {
+    .fees-payments__description {
         font-size: 1.5rem;
         white-space: nowrap;
     }
 
-    .returning-patients__body {
+    .fees-payments__body {
         gap: 1rem;
     }
 
-    .returning-patients-item {
+    .fees-payments-item {
         gap: 1.5rem;
         width: 100%;
 
