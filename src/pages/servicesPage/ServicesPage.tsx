@@ -1,18 +1,17 @@
-import './Services.scss';
+import './ServicesPage.scss';
 import React from "react";
 import { useTranslation } from "react-i18next";
 import data from "../../data/servicesOfferedListData.json";
+import { JsonParagraphsDataInterface } from '../../interfaces/JsonParagraphsDataInterface';
+import JsonParagraphsDataFormatService from '../../services/JsonParagraphsHelper';
 
 export interface IServicesProps { };
-export interface IServicesItem {
-    itemTitle: string;
-    itemDescriptionParagraphs: string[];
-}
 
 const Services: React.FunctionComponent<IServicesProps> = (props) => {
 
     const { t } = useTranslation();
-    const servicesOffered: IServicesItem[] = data;
+    const servicesOffered: JsonParagraphsDataInterface[] = JSON.parse(JSON.stringify(data));
+    let numberedListItemCounterObj = {index: 1};
 
     return (
         <div className="flex--column services main-background-img">
@@ -29,14 +28,17 @@ const Services: React.FunctionComponent<IServicesProps> = (props) => {
                     servicesOffered.map((item, index) => {
                         return <div key={index} className="card-box services-item flex--column">
                             <p className="header color--blue">
-                                {t(item.itemTitle)}
+                                {t(item.title)}
                             </p>
-                            {item.itemDescriptionParagraphs.map((desc, index) =>
+                            {item.paragraphs.map((subItem, index) =>
                                 <p key={index} className="description">
-                                    {desc}
+                                    {
+                                            JsonParagraphsDataFormatService.getListSymbol(subItem.paragraphListType, numberedListItemCounterObj) +
+                                            " " +
+                                            subItem.content
+                                        }
                                 </p>
                             )}
-
                         </div>
                     })
                 }

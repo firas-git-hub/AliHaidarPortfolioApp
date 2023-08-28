@@ -2,6 +2,7 @@ import React from "react";
 import './PoliciesRegulations.scss';
 import { useTranslation } from "react-i18next";
 import data from "../../data/policiesRegulationsData.json";
+import JsonParagraphsDataFormatService from "../../services/JsonParagraphsHelper";
 
 export interface IPoliciesRegulationsProps { };
 
@@ -35,7 +36,7 @@ const PoliciesRegulations: React.FunctionComponent<IPoliciesRegulationsProps> = 
                                 item.paragraphs.map((subItem, index) => {
                                     return <p key={index} className="policies-regulations-item__paragraph">
                                         {
-                                            getListSymbol(subItem.paragraphListType, numberedListItemCounterObj) +
+                                            JsonParagraphsDataFormatService.getListSymbol(subItem.paragraphListType, numberedListItemCounterObj) +
                                             " " +
                                             subItem.content
                                         }
@@ -48,27 +49,6 @@ const PoliciesRegulations: React.FunctionComponent<IPoliciesRegulationsProps> = 
             </div>
         </div>
     )
-}
-
-//I passed the index as object so the argument taken by the unction would be taken by reference. this means that i can change the object through the function.
-const getListSymbol = (paragraphListType: string, listSubitemIndexObj: {index: number}): string => {
-    let returnVal = "";
-    if (paragraphListType == "numbered") {
-        returnVal = listSubitemIndexObj.index + ".";
-        listSubitemIndexObj.index += 1;
-    }
-    else if (paragraphListType == "bulletPoint") {
-        returnVal = "\u2022";
-    }
-    else if (paragraphListType == "bulletPoint") {
-        returnVal = "\u2022";
-    }
-    
-    else {
-        listSubitemIndexObj.index = 1;
-        returnVal = paragraphListType;
-    }
-    return returnVal;
 }
 
 export default PoliciesRegulations;

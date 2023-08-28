@@ -6,16 +6,16 @@ import Footer from './components/footer/Footer';
 import TopView from './components/top-view/TopView';
 import ClickableCard, { ClickableCardProps } from './components/clickable-card/ClickableCard';
 import { Routes, Route, Link } from "react-router-dom";
-import Home from './pages/home/Home';
-import NotFound from './pages/notFound/NotFound';
-import Services from './pages/services/Services';
-import ContactInfo from './pages/contactInfo/ContactInfo';
-import PoliciesRegulations from './pages/policiesRegulations/PoliciesRegulations';
-import ReturningPatients from './pages/feesPayments/FeesPayments';
+import Home from './pages/homePage/Home';
+import NotFound from './pages/notFoundPage/NotFound';
+import Services from './pages/servicesPage/ServicesPage';
+import ContactInfo from './pages/contactInfoPage/ContactInfo';
+import PoliciesRegulations from './pages/policiesRegulationsPage/PoliciesRegulations';
+import ReturningPatients from './pages/feesPaymentsPage/FeesPayments';
 import data from "./data/navCardsListData.json"
 import { useLocation, useNavigate } from "react-router-dom";
-import NewPatients from './pages/newpatients/NewPatients';
-import FeesPayments from './pages/feesPayments/FeesPayments';
+import NewPatients from './pages/newpatientsPage/NewPatients';
+import FeesPayments from './pages/feesPaymentsPage/FeesPayments';
 
 
 function App() {
