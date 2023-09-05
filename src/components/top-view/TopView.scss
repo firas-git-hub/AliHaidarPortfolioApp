@@ -1,3 +1,17 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.component-header {
+    width: fit-content;
+}
+
 .topview-container {
     display: flex;
     flex-direction: row;
@@ -33,13 +47,8 @@
 
             .description {
                 font-size: 1rem;
-                display: flex;
                 align-items: center;
                 line-height: 1.75rem;
-            }
-
-            .description--list {
-                gap: 1rem;
             }
         }
     }
@@ -68,9 +77,14 @@
             border: 0.25rem solid #d1dfe8;
             padding-top: 20%;
             background-image: url("../../../public/images/portraitimgbackground.png");
+            display: flex;
+            justify-content: center;
+            aspect-ratio: 1/1;
 
             img.portrait {
+                animation: fadeIn 1s;
                 position: relative;
+                transition: all;
             }
         }
 
@@ -90,13 +104,16 @@
     }
 
     .differently-sized-boxes {
-        display: grid;
-        grid-template:
-            "box1 box1 box1 box4"
-            "box2 box2 box2 box4"
-            "box3 box3 box3 box3";
-        gap: 1rem;
         height: 100%;
+        display: grid;
+        gap: 1rem;
+        grid-template:
+            "box1 box2";
+
+        &.home {
+            height: fit-content;
+            display: flex;
+        }
 
         .card-box {
             padding: 1rem;
@@ -116,6 +133,10 @@
 
         .box4 {
             grid-area: box4;
+        }
+
+        .box5 {
+            grid-area: box5;
         }
 
         &>* {

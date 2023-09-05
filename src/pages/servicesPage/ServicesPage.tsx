@@ -7,11 +7,17 @@ import JsonParagraphsDataFormatService from '../../services/JsonParagraphsHelper
 
 export interface IServicesProps { };
 
+export interface IServicesData {
+    header?: string;
+    subTitle?: string;
+    textContent: JsonParagraphsDataInterface[];
+};
+
 const Services: React.FunctionComponent<IServicesProps> = (props) => {
 
     const { t } = useTranslation();
-    const servicesOffered: JsonParagraphsDataInterface[] = JSON.parse(JSON.stringify(data));
-    let numberedListItemCounterObj = {index: 1};
+    const servicesOffered: IServicesData = JSON.parse(JSON.stringify(data));
+    let numberedListItemCounterObj = { index: 1 };
 
     return (
         <div className="flex--column services main-background-img">
@@ -25,20 +31,14 @@ const Services: React.FunctionComponent<IServicesProps> = (props) => {
             </div>
             <div className="services__body flex--column">
                 {
-                    servicesOffered.map((item, index) => {
+                    servicesOffered.textContent.map((item, index) => {
                         return <div key={index} className="card-box services-item flex--column">
                             <p className="header color--blue">
                                 {t(item.title)}
                             </p>
-                            {item.paragraphs.map((subItem, index) =>
-                                <p key={index} className="description">
-                                    {
-                                            JsonParagraphsDataFormatService.getListSymbol(subItem.paragraphListType, numberedListItemCounterObj) +
-                                            " " +
-                                            subItem.content
-                                        }
-                                </p>
-                            )}
+                            {
+                                item.paragraphs.map((subItem, index) => JsonParagraphsDataFormatService.formatJsonDataText(index, subItem, numberedListItemCounterObj, "description"))
+                            }
                         </div>
                     })
                 }

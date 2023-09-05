@@ -1,13 +1,51 @@
-[
-    "I work in hospital settings that accept certain insurances, however, in my private practice, I do not participate with any insurance plans. I provide documentation to help individuals obtain out of network reimbursements with their insurer.",
-    "You can check with your insurer whether you have out of network coverage.",
-    "Fees for consultations/evaluations and follow-up sessions are due on the day of service.",
-    "Please contact your insurance company for details and ask whether or not you have  'out-of-network' benefits, if so, ask about the amount of reimbursement per visit, and whether you have any out-of-network deductibles that must be met before these benefits are active.",
-    "Typically, these claims can be submitted online or by mail after the provider gives the patient a receipt that includes all relevant diagnostic and service codes.",
-    "Commonly used CPT codes in my practice include:",
-    "Initial Evaluation: 90792",
-    "Medication Management Follow-up visit: 99213 or 99214",
-    "Psychotherapy “add-on” (used in conjunction with medication management codes",
-    "above): 90833 or 90836",
-    "Psychotherapy: 90834"
-]
+{
+    "header": "feesPaymentsHeader",
+    "subTitle": "feesPaymentsSubtitle",
+    "textContent": [
+        {
+            "title": "",
+            "paragraphs": [
+                {
+                    "content": "I work in hospital settings that accept certain insurances, however, in my private practice, I do not participate with any insurance plans. I provide documentation to help individuals obtain out of network reimbursements with their insurer.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "You can check with your insurer whether you have out of network coverage.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Fees for consultations/evaluations and follow-up sessions are due on the day of service.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Please contact your insurance company for details and ask whether or not you have  'out-of-network' benefits, if so, ask about the amount of reimbursement per visit, and whether you have any out-of-network deductibles that must be met before these benefits are active.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Typically, these claims can be submitted online or by mail after the provider gives the patient a receipt that includes all relevant diagnostic and service codes.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Commonly used CPT codes in my practice include:",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Initial Evaluation: 90792",
+                    "paragraphListType": "bulletPoint"
+                },
+                {
+                    "content": "Medication Management Follow-up visit: 99213 or 99214",
+                    "paragraphListType": "bulletPoint"
+                },
+                {
+                    "content": "Psychotherapy “add-on” (used in conjunction with medication management codes above): 90833 or 90836",
+                    "paragraphListType": "bulletPoint"
+                },
+                {
+                    "content": "Psychotherapy: 90834",
+                    "paragraphListType": "bulletPoint"
+                }
+            ]
+        }
+    ]
+}

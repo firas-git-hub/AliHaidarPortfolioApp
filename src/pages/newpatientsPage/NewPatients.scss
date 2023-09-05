@@ -3,6 +3,7 @@
     gap: 1rem;
     height: 100%;
     flex-shrink: 0;
+    position: relative;
 
     .card-box {
         width: fit-content;
@@ -18,17 +19,33 @@
     }
 
     .new-patients__body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
-    }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-    .new-patients-item {
-        gap: 1.5rem;
-        width: 100%;
-
-        .header {
-            font-size: 2rem;
+        .luminello-img-container {
+            width: auto;
+            height: 3rem;
+            margin-block-end: 2rem;
         }
 
-        .description {}
+        .text-item {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .text-item__paragraph {}
+        }
+    }
+
+    .new-patients__body.card-box {
+        padding-inline: 5rem;
+        padding-block: 3rem;
     }
 }

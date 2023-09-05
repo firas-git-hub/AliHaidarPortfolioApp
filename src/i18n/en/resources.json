@@ -1,8 +1,10 @@
 {
     "en": {
         "translation": {
-            "topviewHeader": "Ali Haidar MD",
-            "topviewTitle": "About me",
+            "topViewAboutMeHeader": "Ali Haidar MD",
+            "topViewAboutMeSubtitle": "About me",
+            "topViewHomeHeader": "Ali Haidar MD",
+            "topViewHomeSubtitle": "Home",
             "navbarText": "Ali Haidar MD",
             "notFound": "Not Found",
             "notFoundMsg": "Error 404: Page not found",

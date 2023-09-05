@@ -1,74 +1,64 @@
 import "./TopView.scss";
-import React from "react";
-import data from "../../data/topViewCardsData.json";
+import React, { ReactNode } from "react";
+import homeData from "../../data/topViewCardsData.json";
+import aboutMeData from "../../data/aboutMeData.json";
 import { useTranslation } from "react-i18next";
+import { JsonParagraphsDataInterface } from "../../interfaces/JsonParagraphsDataInterface";
+import JsonParagraphsDataFormatService from "../../services/JsonParagraphsHelper";
 
 export interface ITopViewProps {
-    header?: string;
-    subTitle?: string;
-    descriptionList?: { cardDescription: string | string[] }[];
+    componentDataToRender: "home" | "aboutme";
 }
 
-const TopView: React.FunctionComponent<{}> = () => {
+export interface ITopViewDataProps {
+    header?: string;
+    subTitle?: string;
+    textContent: JsonParagraphsDataInterface[];
+}
+
+const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) => {
 
     const { t } = useTranslation();
+    let cardBoxesData = props.componentDataToRender == "aboutme" ? aboutMeData : homeData;
+    let numberedListItemCounterObj = { index: 0 };
 
-    let cardBoxesData: ITopViewProps = data;
     return <>
         <div className="topview-container main-background-img">
             <div className="topview-container__info">
                 <div className="card-box">
                     <p className="topview-container__info__header bold">
-                        {t("topviewHeader")}
+                        {t(cardBoxesData.header)}
                     </p>
                     <p className="topview-container__info__title color--blue">
-                        {t("topviewTitle")}
+                        {t(cardBoxesData.subTitle)}
                     </p>
                 </div>
-                <div className="differently-sized-boxes">
+                <div className={"differently-sized-boxes" + (props.componentDataToRender == "home" ? " home" : "")}>
                     {
-                        cardBoxesData.descriptionList!.map((element, index) => {
-                            return (
-                                <div key={index} className={"topview-container__info__description card-box " + "box" + (index + 1).toString()}>
-                                    {/* <span className="header color--blue">{element.cardHeader}</span> */}
+                        cardBoxesData.textContent
+                            ? cardBoxesData.textContent.map((element, index) => {
+                                return <div key={index} className={"topview-container__info__description card-box " + "box" + (index + 1).toString()}>
+                                    <p className={"color--blue" + (element.title ? "" : " display--none")}>{element.title ? t(element.title) : ""}</p>
                                     {
-                                        formatElement(element)
+                                        element.paragraphs!.map((subItem, index) => {
+                                            return JsonParagraphsDataFormatService.formatJsonDataText(index, subItem, numberedListItemCounterObj, "description");
+                                        })
                                     }
                                 </div>
-                            );
-                        })
+                            })
+                            : null
                     }
                 </div>
             </div>
             <div className="img-container">
                 <div className="portrait-img-container">
-                    <img className="portrait" src="images/AliHaidarPortrait2.png" />
+                    <img className="portrait" src={props.componentDataToRender == "home" ? "images/AliHaidarPortrait2.png" : "images/AliHaidarPortrait.png"} />
                 </div>
                 <img className="background-1" src="images/headshotBackgroundTriangles2.png" />
                 <img className="background-2" src="images/headshotBackgroundTriangles2.png" />
             </div>
         </div>
     </>
-}
-
-const formatElement = (element: { cardDescription: string[] | string }): JSX.Element => {
-    if (typeof (element.cardDescription) == "string") {
-        return <span className="description">
-            {
-                element.cardDescription
-            }
-        </span>
-    }
-    else if (Array.isArray(element.cardDescription)) {
-        return (
-            <>
-                {
-                    element.cardDescription.map((item, index) => <span key={index} className="description">{item}</span>)
-                }
-            </>
-        )
-    }
-    return <></>
 }
 
 export default TopView;

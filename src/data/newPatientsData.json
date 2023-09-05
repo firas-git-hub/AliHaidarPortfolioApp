@@ -1,1 +1,29 @@
-{}
+{
+    "header": "topViewAboutMeHeader",
+    "subTitle": "topViewAboutMeSubtitle",
+    "luminelloFormParagraph": "Please fill the brief consultation request from: ",
+    "luminelloFormLink": "https://app.luminello.com/alihaidarmd/form",
+    "textContent": [
+        {
+            "title": "",
+            "paragraphs": [
+                {
+                    "content": "I will review the form and call you to see if we are a good fit",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "We will schedule a new appointment",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "You will complete a Comprehensive Intake Form prior to your new consultation session",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "We can determine a follow up schedule if we are a good fit.",
+                    "paragraphListType": ""
+                }
+            ]
+        }
+    ]
+}

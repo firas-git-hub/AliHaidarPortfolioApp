@@ -6,14 +6,12 @@ import Footer from './components/footer/Footer';
 import TopView from './components/top-view/TopView';
 import ClickableCard, { ClickableCardProps } from './components/clickable-card/ClickableCard';
 import { Routes, Route, Link } from "react-router-dom";
-import Home from './pages/homePage/Home';
 import NotFound from './pages/notFoundPage/NotFound';
 import Services from './pages/servicesPage/ServicesPage';
 import ContactInfo from './pages/contactInfoPage/ContactInfo';
 import PoliciesRegulations from './pages/policiesRegulationsPage/PoliciesRegulations';
-import ReturningPatients from './pages/feesPaymentsPage/FeesPayments';
 import data from "./data/navCardsListData.json"
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NewPatients from './pages/newpatientsPage/NewPatients';
 import FeesPayments from './pages/feesPaymentsPage/FeesPayments';
 
@@ -21,8 +19,6 @@ import FeesPayments from './pages/feesPaymentsPage/FeesPayments';
 function App() {
 
 	const navigate = useNavigate();
-	const [navCards, setNavCards] = useState([]);
-	let tempParagraph = "My pincher collar is snapped on. Then comes the electric zapper collar. Finally, my purple at-home collar is taken off and I know I’m going for a walk to the dog park. I’m so excited to see my friends. I hope Spike or Thunder are there already. They're the most fun to chase and tumble with."
 	let navCardsList: ClickableCardProps[] = data.map((element) => {
 		return {
 			...element,
@@ -32,13 +28,13 @@ function App() {
 			}
 		}
 	});
-
 	return (
 		<div className="App">
 			{/* <NavBar></NavBar> */}
 			<Routes>
-				<Route path="/" element={<TopView />} />
 				<Route path="/*" element={<NotFound />} />
+				<Route path="/" element={<TopView componentDataToRender="home" />} />
+				<Route path="/aboutme" element={<TopView componentDataToRender="aboutme" />} />
 				<Route path="/services" element={<Services />} />
 				<Route path="/contactinfo" element={<ContactInfo />} />
 				<Route path="/policiesregulations" element={<PoliciesRegulations />} />
@@ -56,6 +52,7 @@ function App() {
 					></ClickableCard>
 				)}
 			</div>
+			
 			{/* <Footer></Footer> */}
 		</div>
 	);

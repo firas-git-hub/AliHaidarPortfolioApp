@@ -1,101 +1,105 @@
-[
-    {
-        "title": "consultations",
-        "paragraphs": [
-            {
-                "content": "I will conduct a comprehensive initial evaluation over 75 minutes for adults and over two 60 minutes sessions for children/adolescents.",
-                "paragraphListType": ""
-            },
-            {
-                "content": "After our initial meeting, I might order labs and review other documentation, or speak to other people in your life or to schools. At the conclusion of the evaluation, I provide a comprehensive assessment and treatment plan recommendations.",
-                "paragraphListType": ""
-            },
-            {
-                "content": "We will establish a physician-patient relationship if we mutually agree that my practice is an appropriate place for your treatment. If this is not the case, I will provide you with an alternative referral.",
-                "paragraphListType": ""
-            },
-            {
-                "content": "A consultation is not a guarantee that I will be able to take the individual on as a patient.",
-                "paragraphListType": ""
-            }
-        ]
-    },
-    {
-        "title": "psychotherapy",
-        "paragraphs": [
-            {
-                "content": "I am trained in various forms of psychotherapy and cover a range of conditions. I practice the form that best fits my patient and often integrate several treatment modalities. Below is a list of some of the psychotherapies I am experienced in:",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Psychodynamic Psychotherapy.",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Cognitive Behavioral Therapy.",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Exposure Therapy.",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Exposure Response Prevention",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Supportive Therapy",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Interpersonal Therapy",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Play Therapy for Children",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Parent Management Training",
-                "paragraphListType": ""
-            }
-        ]
-    },
-    {
-        "title": "psychopharmacology",
-        "paragraphs": [
-            {
-                "content": "ADHD",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Anxiety Disorders",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Depression",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Bipolar Disorder",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Insomnia/Sleep Disorders",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Obsessive Compulsive Disorder",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Tic Disorders",
-                "paragraphListType": ""
-            },
-            {
-                "content": "Post Traumatic Stress Disorder",
-                "paragraphListType": ""
-            }
-        ]
-    }
-]
+{
+    "header": "topViewAboutMeHeader",
+    "subTitle": "topViewAboutMeSubtitle",
+    "textContent": [
+        {
+            "title": "consultations",
+            "paragraphs": [
+                {
+                    "content": "I will conduct a comprehensive initial evaluation over 75 minutes for adults and over two 60 minutes sessions for children/adolescents.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "After our initial meeting, I might order labs and review other documentation, or speak to other people in your life or to schools. At the conclusion of the evaluation, I provide a comprehensive assessment and treatment plan recommendations.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "We will establish a physician-patient relationship if we mutually agree that my practice is an appropriate place for your treatment. If this is not the case, I will provide you with an alternative referral.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "A consultation is not a guarantee that I will be able to take the individual on as a patient.",
+                    "paragraphListType": ""
+                }
+            ]
+        },
+        {
+            "title": "psychotherapy",
+            "paragraphs": [
+                {
+                    "content": "I am trained in various forms of psychotherapy and cover a range of conditions. I practice the form that best fits my patient and often integrate several treatment modalities. Below is a list of some of the psychotherapies I am experienced in:",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Psychodynamic Psychotherapy.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Cognitive Behavioral Therapy.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Exposure Therapy.",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Exposure Response Prevention",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Supportive Therapy",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Interpersonal Therapy",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Play Therapy for Children",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Parent Management Training",
+                    "paragraphListType": ""
+                }
+            ]
+        },
+        {
+            "title": "psychopharmacology",
+            "paragraphs": [
+                {
+                    "content": "ADHD",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Anxiety Disorders",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Depression",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Bipolar Disorder",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Insomnia/Sleep Disorders",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Obsessive Compulsive Disorder",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Tic Disorders",
+                    "paragraphListType": ""
+                },
+                {
+                    "content": "Post Traumatic Stress Disorder",
+                    "paragraphListType": ""
+                }
+            ]
+        }
+    ]
+}

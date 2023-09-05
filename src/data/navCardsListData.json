@@ -6,6 +6,12 @@
         "routerPath": "/"
     },
     {
+        "cardImagePath": "/icons/aboutme256x256.png",
+        "cardHeader": "Ali Haidar MD",
+        "cardDescription": "About me",
+        "routerPath": "/aboutme"
+    },
+    {
         "cardImagePath": "/icons/services256x256.png",
         "cardHeader": "Services",
         "cardDescription": "Check out the services offered for a better mental health and a better lifestyle.",
@@ -22,12 +28,6 @@
         "cardHeader": "Contact Info",
         "cardDescription": "All the info you need to make contact with our clinic. Please reach out in case you have any questions on the communication means provided.",
         "routerPath": "/contactinfo"
-    },
-    {
-        "cardImagePath": "/icons/returningpatients.png",
-        "cardHeader": "Returning patients",
-        "cardDescription": "Feel free to reach out to us whenever you feel like you're ready. Dont be hesistant to ask for a consultation.",
-        "routerPath": "/returningpatients"
     },
     {
         "cardImagePath": "/icons/newpatients256x256.png",
