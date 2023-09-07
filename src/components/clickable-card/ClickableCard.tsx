@@ -12,7 +12,9 @@ export interface ClickableCardProps {
 const ClickableCard: React.FunctionComponent<ClickableCardProps> = (props) => {
 
     const cardClicked = ():void => {
-        props.navigateOnClick ? props.navigateOnClick() : null;
+        if (props.navigateOnClick) {
+            props.navigateOnClick = props.navigateOnClick()
+        }
     }
 
     return <>
