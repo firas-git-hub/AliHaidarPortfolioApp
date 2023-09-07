@@ -35,6 +35,19 @@
             font-size: 2rem;
         }
 
+        
+        &.home-page-variant {
+
+            justify-content: center;
+            .topview-container__info__header {
+                font-size: 4rem;
+            }
+    
+            .topview-container__info__title {
+                font-size: 3rem;
+            }
+        }
+
         .topview-container__info__description {
             height: auto;
             display: flex;
@@ -46,7 +59,7 @@
             // }
 
             .description {
-                font-size: 1rem;
+                font-size: 1.125rem;
                 align-items: center;
                 line-height: 1.75rem;
             }
@@ -76,7 +89,7 @@
             background-repeat: round;
             border: 0.25rem solid #d1dfe8;
             padding-top: 20%;
-            background-image: url("../../../public/images/portraitimgbackground.png");
+            background-image: url("/assets/images/portraitimgbackground.png");
             display: flex;
             justify-content: center;
             aspect-ratio: 1/1;
@@ -108,7 +121,8 @@
         display: grid;
         gap: 1rem;
         grid-template:
-            "box1 box2";
+            "box1 box2"
+            "box1 box3";
 
         &.home {
             height: fit-content;

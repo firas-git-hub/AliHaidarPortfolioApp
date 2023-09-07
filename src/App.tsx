@@ -13,7 +13,6 @@ import PoliciesRegulations from './pages/policiesRegulationsPage/PoliciesRegulat
 import data from "./data/navCardsListData.json"
 import { useNavigate } from "react-router-dom";
 import NewPatients from './pages/newpatientsPage/NewPatients';
-import FeesPayments from './pages/feesPaymentsPage/FeesPayments';
 
 
 function App() {
@@ -38,7 +37,6 @@ function App() {
 				<Route path="/services" element={<Services />} />
 				<Route path="/contactinfo" element={<ContactInfo />} />
 				<Route path="/policiesregulations" element={<PoliciesRegulations />} />
-				<Route path="/feespayments" element={<FeesPayments />} />
 				<Route path="/newpatients" element={<NewPatients />} />
 			</Routes>
 			<div className="app-content">

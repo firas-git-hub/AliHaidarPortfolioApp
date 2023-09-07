@@ -72,15 +72,7 @@ img {
 }
 
 .main-background-img {
-	/* background-image: url("../public/images/background1.jpg"); */
-	/* background-image: url("../public/images/background2.jpg"); */
-	/* background-image: url("../public/images/background3.jpg"); */
-	/* background-image: url("../public/images/background4.jpg"); */
-	/* background-image: url("../public/images/background5.jpg"); */
-	/* background-image: url("../public/images/background6.jpg"); */
-	/* background-image: url("../public/images/background7.jpg"); */
-	/* background-image: url("../public/images/TopViewBackground.png"); */
-	background-image: url("../public/images/background.jpg");
+	background-image: url("assets/images/background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }

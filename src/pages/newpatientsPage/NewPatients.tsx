@@ -33,7 +33,7 @@ const NewPatients: React.FunctionComponent<INewPatientsProps> = (props) => {
             </div>
             <div className="card-box new-patients__body">
                 <div className="luminello-img-container">
-                    <img src="icons/luminello.png" />
+                    <img src="assets/icons/luminello.png" />
                 </div>
                 <span>
                     {newPatientsData.luminelloFormParagraph}

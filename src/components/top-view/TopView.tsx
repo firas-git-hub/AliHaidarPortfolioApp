@@ -24,8 +24,8 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
 
     return <>
         <div className="topview-container main-background-img">
-            <div className="topview-container__info">
-                <div className="card-box">
+            <div className={"topview-container__info " + (props.componentDataToRender == "aboutme" ? "" : "home-page-variant")}>
+                <div className={(props.componentDataToRender == "aboutme") ? "card-box" : "home-page-variant"}>
                     <p className="topview-container__info__header bold">
                         {t(cardBoxesData.header)}
                     </p>
@@ -52,10 +52,10 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
             </div>
             <div className="img-container">
                 <div className="portrait-img-container">
-                    <img className="portrait" src={props.componentDataToRender == "home" ? "images/AliHaidarPortrait2.png" : "images/AliHaidarPortrait.png"} />
+                    <img className="portrait" src={props.componentDataToRender == "home" ? "assets/images/AliHaidarPortrait2.png" : "assets/images/AliHaidarPortrait.png"} />
                 </div>
-                <img className="background-1" src="images/headshotBackgroundTriangles2.png" />
-                <img className="background-2" src="images/headshotBackgroundTriangles2.png" />
+                <img className="background-1" src="/assets/images/headshotBackgroundTriangles2.png" />
+                <img className="background-2" src="/assets/images/headshotBackgroundTriangles2.png" />
             </div>
         </div>
     </>

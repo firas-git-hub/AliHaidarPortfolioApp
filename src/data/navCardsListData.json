@@ -1,44 +1,38 @@
 [
     {
-        "cardImagePath": "/icons/home.png",
+        "cardImagePath": "/assets/icons/home.png",
         "cardHeader": "Home",
         "cardDescription": "Navigate to the home page and make yourself at home.",
         "routerPath": "/"
     },
     {
-        "cardImagePath": "/icons/aboutme256x256.png",
+        "cardImagePath": "/assets/icons/aboutme256x256.png",
         "cardHeader": "Ali Haidar MD",
         "cardDescription": "About me",
         "routerPath": "/aboutme"
     },
     {
-        "cardImagePath": "/icons/services256x256.png",
+        "cardImagePath": "/assets/icons/services256x256.png",
         "cardHeader": "Services",
         "cardDescription": "Check out the services offered for a better mental health and a better lifestyle.",
         "routerPath": "/services"
     },
     {
-        "cardImagePath": "/icons/policiesregulations256x256.png",
+        "cardImagePath": "/assets/icons/policiesregulations256x256.png",
         "cardHeader": "Policies and regulations",
         "cardDescription": "Through this page you will be able to see the policies and regulations we use to make this space and our practice safe for everyoe involved.",
         "routerPath": "/policiesregulations"
     },
     {
-        "cardImagePath": "/icons/contactinfo256x256.png",
+        "cardImagePath": "/assets/icons/contactinfo256x256.png",
         "cardHeader": "Contact Info",
         "cardDescription": "All the info you need to make contact with our clinic. Please reach out in case you have any questions on the communication means provided.",
         "routerPath": "/contactinfo"
     },
     {
-        "cardImagePath": "/icons/newpatients256x256.png",
+        "cardImagePath": "/assets/icons/newpatients256x256.png",
         "cardHeader": "New patients",
         "cardDescription": "Welcome to our clinic's website. Please find the information that you need here.",
         "routerPath": "/newpatients"
-    },
-    {
-        "cardImagePath": "/icons/feespayments256x256.png",
-        "cardHeader": "Fees and Payments",
-        "cardDescription": "The fees that we charge for our services.",
-        "routerPath": "/feespayments"
     }
 ]
