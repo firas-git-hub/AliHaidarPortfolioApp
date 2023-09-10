@@ -63,7 +63,23 @@
             }
 
             .phone-number-chip {
-                
+                font-size: 0.25rem;
+
+                .MuiAvatar-root {
+                    width: auto;
+                    height: auto;
+                    border-radius: unset;
+                }
+
+                .MuiChip-label {
+                    padding-left: unset;
+                }
+
+                img {
+                    padding: unset;
+                    width: 10rem;
+                    height: auto;
+                }
             }
         }
     }
