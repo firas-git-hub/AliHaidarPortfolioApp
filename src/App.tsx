@@ -28,7 +28,7 @@ function App() {
 		}
 	};
 	
-	onload = () => {
+	window.onload = () => {
 		document.getElementsByClassName("App")[0].addEventListener('scroll', toggleVisible);
 	}
 	const navigate = useNavigate();
