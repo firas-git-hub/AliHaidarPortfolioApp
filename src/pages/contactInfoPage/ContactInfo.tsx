@@ -2,7 +2,7 @@ import React from "react";
 import './ContactInfo.scss';
 import { useTranslation } from "react-i18next";
 import data from "../../data/contactInfoData.json";
-import { Chip } from "@mui/material";
+import { Avatar, Chip } from "@mui/material";
 
 export interface IContactInfoProps {
     name: string;
@@ -43,7 +43,11 @@ const ContactInfo: React.FunctionComponent<{}> = () => {
                 <div className="card-box contact-info__body__item white-space--nowrap">
                     <img src="assets/icons/phoneicon256x256.png" />
                     <div className="item-text-content-wrapper">
-                        <Chip label={contactInfoData.phone}/>
+                        {/* <Chip label= clickable component="a" href= >
+
+                        </Chip> */}
+
+                        <Chip className="phone-number-chip" avatar={<Avatar src="/assets/images/contactusphone.png" />} clickable onClick={() => "tel:" + contactInfoData.phone.toString()} />
                         <Chip label={contactInfoData.email} clickable component="a" href={"mailto:" + contactInfoData.email.toString()} />
                     </div>
                 </div>

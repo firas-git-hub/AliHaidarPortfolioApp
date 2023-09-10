@@ -7,8 +7,8 @@
     },
     {
         "cardImagePath": "/assets/icons/aboutme256x256.png",
-        "cardHeader": "Ali Haidar MD",
-        "cardDescription": "About me",
+        "cardHeader": "About me",
+        "cardDescription": "Ali Haidar MD",
         "routerPath": "/aboutme"
     },
     {

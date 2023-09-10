@@ -1,7 +1,7 @@
 {
     "header": "topViewAboutMeHeader",
     "subTitle": "topViewAboutMeSubtitle",
-    "luminelloFormParagraph": "Please fill the brief consultation request from: ",
+    "luminelloFormParagraph": "Please complete the brief consultation form: ",
     "luminelloFormLink": "https://app.luminello.com/alihaidarmd/form",
     "textContent": [
         {
@@ -16,7 +16,7 @@
                     "paragraphListType": ""
                 },
                 {
-                    "content": "In preparation for our first session, you will be asked complete a <b>Comprehensive Intake Form</b> via Luminello",
+                    "content": "In preparation for our first session, you will be asked to complete a <b>Comprehensive Intake Form</b> via Luminello",
                     "paragraphListType": ""
                 },
                 {
