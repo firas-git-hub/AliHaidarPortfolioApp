@@ -20,6 +20,22 @@ body,
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
+	.back-to-top-button {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: fit-content;
+		margin-bottom: 0.1875rem;
+		margin-right: 1rem;
+		background-color: #66a6d6;
+		z-index: 10;
+		transition: visibility 0.25s, opacity 0.25s;
+	
+		&:hover {
+			background-color: #66a6d6;
+		}
+	}
 }
 
 img {
@@ -113,6 +129,11 @@ img {
 	white-space: nowrap;
 }
 
-.display--none {
-	display: none;
+.hidden {
+	display: none !important;
+}
+
+.invisible {
+	visibility: hidden;
+	opacity: 0;
 }

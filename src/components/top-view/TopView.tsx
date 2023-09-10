@@ -1,10 +1,12 @@
 import "./TopView.scss";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useRef } from "react";
 import homeData from "../../data/topViewCardsData.json";
 import aboutMeData from "../../data/aboutMeData.json";
 import { useTranslation } from "react-i18next";
 import { JsonParagraphsDataInterface } from "../../interfaces/JsonParagraphsDataInterface";
 import JsonParagraphsDataFormatService from "../../services/JsonParagraphsHelper";
+import { IconButton } from "@mui/material";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 export interface ITopViewProps {
     componentDataToRender: "home" | "aboutme";
@@ -38,7 +40,7 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
                         cardBoxesData.textContent
                             ? cardBoxesData.textContent.map((element, index) => {
                                 return <div key={index} className={"topview-container__info__description card-box " + "box" + (index + 1).toString()}>
-                                    <p className={"color--blue" + (element.title ? "" : " display--none")}>{element.title ? t(element.title) : ""}</p>
+                                    <p className={"color--blue" + (element.title ? "" : " hidden")}>{element.title ? t(element.title) : ""}</p>
                                     {
                                         element.paragraphs!.map((subItem, index) => {
                                             return JsonParagraphsDataFormatService.formatJsonDataText(index, subItem, numberedListItemCounterObj, "description");
@@ -57,8 +59,18 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
                 <img className="background-1" src="/assets/images/headshotBackgroundTriangles2.png" />
                 <img className="background-2" src="/assets/images/headshotBackgroundTriangles2.png" />
             </div>
+            <IconButton className="go-to-nav-button" onClick={goToNavSection}>
+                <KeyboardArrowUpIcon />
+            </IconButton>
         </div>
     </>
+}
+
+const goToNavSection = () => {
+    document.getElementsByClassName("App")[0].scroll({
+        top: document.getElementById("navCards")!.offsetTop,
+        behavior: "smooth"
+    });
 }
 
 export default TopView;
