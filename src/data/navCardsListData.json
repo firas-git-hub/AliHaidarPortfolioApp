@@ -12,6 +12,12 @@
         "routerPath": "/aboutme"
     },
     {
+        "cardImagePath": "/assets/icons/newpatients256x256.png",
+        "cardHeader": "New patients",
+        "cardDescription": "Welcome to our clinic's website. Please find the information that you need here.",
+        "routerPath": "/newpatients"
+    },
+    {
         "cardImagePath": "/assets/icons/services256x256.png",
         "cardHeader": "Services",
         "cardDescription": "Check out the services offered for a better mental health and a better lifestyle.",
@@ -28,11 +34,5 @@
         "cardHeader": "Contact Info",
         "cardDescription": "All the info you need to make contact with our clinic. Please reach out in case you have any questions on the communication means provided.",
         "routerPath": "/contactinfo"
-    },
-    {
-        "cardImagePath": "/assets/icons/newpatients256x256.png",
-        "cardHeader": "New patients",
-        "cardDescription": "Welcome to our clinic's website. Please find the information that you need here.",
-        "routerPath": "/newpatients"
     }
 ]
