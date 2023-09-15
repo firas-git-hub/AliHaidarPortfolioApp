@@ -37,7 +37,7 @@ const NewPatients: React.FunctionComponent<INewPatientsProps> = (props) => {
                 </div>
                 <span className="luminello-link">
                     {newPatientsData.luminelloFormParagraph}
-                    <a title={newPatientsData.luminelloFormLink} href={newPatientsData.luminelloFormLink}>{newPatientsData.luminelloFormLink}</a>
+                    <a title={newPatientsData.luminelloFormLink} target="_blank" href={newPatientsData.luminelloFormLink}>{newPatientsData.luminelloFormLink}</a>
                 </span>
                 {
                     newPatientsData.textContent.map((item, index) => {
