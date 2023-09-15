@@ -25,7 +25,8 @@
         text-align: start;
         display: flex;
         flex-direction: column;
-        margin: 2rem;
+        padding: 2rem;
+        padding-bottom: 2.75rem;
         gap: 1rem;
 
         .topview-container__info__header {
@@ -90,7 +91,7 @@
             overflow: hidden;
             background-repeat: round;
             border: 0.25rem solid #d1dfe8;
-            padding-top: 22%;
+            align-items: self-end;
             background-image: url("/assets/images/portraitimgbackground.png");
             display: flex;
             justify-content: center;
@@ -167,25 +168,100 @@
         width: fit-content;
         transform: translate(-50%, 0);
         margin-bottom: 0.1875rem;
-        background-color: #66a6d6;
+        background-color: #bcdcfb;
+        z-index: 10;
 
         &:hover {
-            background-color: #66a6d6;
+            background-color: #cee7ff;
         }
     }
 }
 
-@media (max-width: 700px) {
+@media (max-height: 875px) or (max-width: 1750px) {
+    .topview-container.about-me-variant {
+        height: fit-content ;
+        flex-direction: column !important;
+
+        .topview-container__info {
+        }
+
+        .differently-sized-boxes {
+            height: fit-content;
+            grid-template:
+                "box1"
+                "box2"
+                "box3";
+        }
+
+        .topview-container__info__description {
+            .description {
+                font-size: 1rem !important;
+            }
+        }
+
+        .img-container {
+            width: 100% !important;
+            padding-bottom: 2.75rem !important;
+            padding-top: 2rem !important;
+
+            .portrait-img-container {
+                height: 24rem;
+                width: 24rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 975px) {
     .topview-container {
         height: auto;
         flex-direction: column !important;
 
         .topview-container__info {
             width: 100% !important;
+            padding-bottom: 2rem;
         }
 
         .img-container {
             width: 100% !important;
+            padding-bottom: 2.75rem !important;
+            padding-top: 2rem !important;
+
+            .portrait-img-container {
+                height: 100% !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 975px) and (min-width: 401px) {
+    .topview-container__info__header {
+        font-size: 3rem !important;
+    }
+
+    .topview-container__info__title {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .topview-container__info {
+        padding: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+
+    .topview-container__info__header {
+        font-size: 2.5rem !important;
+    }
+
+    .topview-container__info__title {
+        font-size: 1.75rem !important;
+    }
+
+    .topview-container__info__description {
+
+        .description {
+            font-size: 1rem !important;
         }
     }
 }

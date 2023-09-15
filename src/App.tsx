@@ -1,11 +1,11 @@
 import React, { Component, useEffect, useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import TopView from './components/top-view/TopView';
 import ClickableCard, { ClickableCardProps } from './components/clickable-card/ClickableCard';
 import { Routes, Route, Link } from "react-router-dom";
 import NotFound from './pages/notFoundPage/NotFound';
-import Services from './pages/servicesPage/ServicesPage';
+import ServicesPage from './pages/servicesPage/ServicesPage';
 import ContactInfo from './pages/contactInfoPage/ContactInfo';
 import PoliciesRegulations from './pages/policiesRegulationsPage/PoliciesRegulations';
 import data from "./data/navCardsListData.json"
@@ -27,7 +27,7 @@ function App() {
 			setScrollToTopVisibility(false)
 		}
 	};
-	
+
 	window.onload = () => {
 		document.getElementsByClassName("App")[0].addEventListener('scroll', toggleVisible);
 	}
@@ -48,8 +48,8 @@ function App() {
 				<Route path="/*" element={<NotFound />} />
 				<Route path="/" element={<TopView componentDataToRender="home" />} />
 				<Route path="/aboutme" element={<TopView componentDataToRender="aboutme" />} />
-				<Route path="/services" element={<Services />} />
 				<Route path="/contactinfo" element={<ContactInfo />} />
+				<Route path="/services" element={<ServicesPage />} />
 				<Route path="/policiesregulations" element={<PoliciesRegulations />} />
 				<Route path="/newpatients" element={<NewPatients />} />
 			</Routes>
@@ -64,7 +64,7 @@ function App() {
 					></ClickableCard>
 				)}
 			</div>
-			<IconButton className={"back-to-top-button " + (scrollToTopVisibility ? "" : "invisible")} onClick={scrollToTop}>
+			<IconButton size="small" className={"back-to-top-button " + (scrollToTopVisibility ? "" : "invisible")} onClick={scrollToTop}>
 				<KeyboardDoubleArrowUpIcon />
 			</IconButton>
 		</div>

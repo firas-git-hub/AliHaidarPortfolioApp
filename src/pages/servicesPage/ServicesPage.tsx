@@ -1,5 +1,5 @@
+import React, { useEffect } from "react";
 import './ServicesPage.scss';
-import React from "react";
 import { useTranslation } from "react-i18next";
 import data from "../../data/servicesOfferedListData.json";
 import { JsonParagraphsDataInterface } from '../../interfaces/JsonParagraphsDataInterface';
@@ -13,29 +13,27 @@ export interface IServicesData {
     textContent: JsonParagraphsDataInterface[];
 };
 
-const Services: React.FunctionComponent<IServicesProps> = (props) => {
+const ServicesPage: React.FunctionComponent<IServicesProps> = (props) => {
 
     const { t } = useTranslation();
-    const servicesOffered: IServicesData = JSON.parse(JSON.stringify(data));
+    const servicesOffered: IServicesData = data;
     let numberedListItemCounterObj = { index: 1 };
 
     return (
-        <div className="flex--column services main-background-img">
+        <div className="services flex--column main-background-img">
             <div className="flex--column card-box">
                 <p className="services__header bold">
-                    {t("servicesHeader")}
+                    {t(servicesOffered.header ? servicesOffered.header : "")}
                 </p>
                 <p className="services__description color--blue">
-                    {t("servicesDescription")}
+                    {t(servicesOffered.subTitle ? servicesOffered.subTitle : "")}
                 </p>
             </div>
             <div className="services__body flex--column">
                 {
                     servicesOffered.textContent.map((item, index) => {
                         return <div key={index} className="card-box services-item flex--column">
-                            <p className="header color--blue">
-                                {t(item.title)}
-                            </p>
+                            <p className="description-header color--blue">{t(item.title)}</p>
                             {
                                 item.paragraphs.map((subItem, index) => JsonParagraphsDataFormatService.formatJsonDataText(index, subItem, numberedListItemCounterObj, "description"))
                             }
@@ -47,4 +45,4 @@ const Services: React.FunctionComponent<IServicesProps> = (props) => {
     )
 }
 
-export default Services;
+export default ServicesPage;

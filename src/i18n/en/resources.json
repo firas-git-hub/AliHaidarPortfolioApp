@@ -9,26 +9,24 @@
             "notFound": "Not Found",
             "notFoundMsg": "Error 404: Page not found",
             "servicesHeader": "Services",
-            "servicesDescription": "These are the services we offer",
+            "servicesSubtitle": "These are the services we offer",
             "consultations": "Consultations",
             "psychotherapy": "Psychotherapy",
             "psychopharmacology": "Psychopharmacology",
             "policiesRegulationsHeader":"Policies & Regulations",
-            "policiesRegulationsDescription":"All you need to know about how we do things at our clinic",
+            "policiesRegulationsSubtitle":"All you need to know about how we do things at our clinic",
             "contactInfoHeader": "Contact Info",
-            "contactInfoDescription": "Feel free to contact us whenever you are ready",
+            "contactInfoSubtitle": "Feel free to contact us whenever you are ready",
             "returningPatientsHeader": "Returning Patients",
-            "returningPatientsDescription": "A safe space for you",
+            "returningPatientsSubtitle": "A safe space for you",
             "newPatientsHeader": "New Patients",
-            "newPatientsDescription": "A step in the right direction",
+            "newPatientsSubtitle": "A step in the right direction",
             "paymentAndFees": "Payments and fees",
             "visitFrequency": "Visit Frequency",
             "lateNoShowCancellationPolicy": "Late, no show, cancelation policy",
             "medications": "Medications",
             "commOutsideOfficeVisits": "Communication Outside Of Office Visits",
-            "confidentiality": "Confidentiality",
-            "feesPaymentsHeader": "Fees and Payments",
-            "feesPaymentsDescription": "What we charge for our services"
+            "confidentiality": "Confidentiality"
         }
     }
 }

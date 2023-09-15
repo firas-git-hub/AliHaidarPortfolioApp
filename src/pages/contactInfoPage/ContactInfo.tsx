@@ -24,28 +24,28 @@ const ContactInfo: React.FunctionComponent<{}> = () => {
                     {t("contactInfoHeader")}
                 </p>
                 <p className="contact-info__description color--blue">
-                    {t("contactInfoDescription")}
+                    {t("contactInfoSubtitle")}
                 </p>
             </div>
             <div className="card-box contact-info__body">
                 <div className="card-box contact-info__body__item">
                     <img src="assets/icons/doctoricon256x256.png" />
                     <div className="item-text-content-wrapper">
-                        <Chip label={contactInfoData.name} />
-                        <Chip label={contactInfoData.occupation} />
+                        <Chip title={contactInfoData.name} label={contactInfoData.name} />
+                        <Chip title={contactInfoData.occupation} label={contactInfoData.occupation} />
                     </div>
                 </div>
                 <div className="card-box contact-info__body__item">
                     <img src="assets/icons/locationicon256x256.png" />
-                    <Chip label={contactInfoData.address} />
+                    <Chip title={contactInfoData.address} label={contactInfoData.address} />
                     {/* this chip below might be used for the location later on */}
                     {/* <Chip label={contactInfoData.address} clickable component="a" target="_blank" href="https://www.google.com/maps/search/?api=1&query=40.7097633,-74.0078967" /> */}
                 </div>
                 <div className="card-box contact-info__body__item white-space--nowrap">
                     <img src="assets/icons/phoneicon256x256.png" />
                     <div className="item-text-content-wrapper">
-                        <Chip className="phone-number-chip" avatar={<Avatar src="/assets/images/contactusphone.png" />} component="a" clickable href={"tel:" + contactInfoData.phone.toString()} />
-                        <Chip label={contactInfoData.email} clickable component="a" href={"mailto:" + contactInfoData.email.toString()} />
+                        <Chip title={contactInfoData.phone} className="phone-number-chip" avatar={<Avatar src="/assets/images/contactusphone.png" />} component="a" clickable href={"tel:" + contactInfoData.phone.toString()} />
+                        <Chip title={contactInfoData.email} label={contactInfoData.email} clickable component="a" href={"mailto:" + contactInfoData.email.toString()} />
                     </div>
                 </div>
             </div>

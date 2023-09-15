@@ -23,21 +23,21 @@ const NewPatients: React.FunctionComponent<INewPatientsProps> = (props) => {
 
     return (
         <div className="new-patients flex--column main-background-img">
-            <div className="flex--column card-box">
+            <div className="new-patients__title-box flex--column card-box">
                 <p className="new-patients__header bold">
-                    {t("newPatientsHeader")}
+                    {t(newPatientsData.header ? newPatientsData.header : "")}
                 </p>
                 <p className="new-patients__description color--blue">
-                    {t("newPatientsDescription")}
+                    {t(newPatientsData.subTitle ? newPatientsData.subTitle : "")}
                 </p>
             </div>
             <div className="card-box new-patients__body">
                 <div className="luminello-img-container">
                     <img src="assets/icons/luminello.png" />
                 </div>
-                <span>
+                <span className="luminello-link">
                     {newPatientsData.luminelloFormParagraph}
-                    <a href={newPatientsData.luminelloFormLink}>{newPatientsData.luminelloFormLink}</a>
+                    <a title={newPatientsData.luminelloFormLink} href={newPatientsData.luminelloFormLink}>{newPatientsData.luminelloFormLink}</a>
                 </span>
                 {
                     newPatientsData.textContent.map((item, index) => {

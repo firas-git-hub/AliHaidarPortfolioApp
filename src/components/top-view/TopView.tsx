@@ -25,8 +25,8 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
     let numberedListItemCounterObj = { index: 0 };
 
     return <>
-        <div className="topview-container main-background-img">
-            <div className={"topview-container__info " + (props.componentDataToRender == "aboutme" ? "" : "home-page-variant")}>
+        <div className={"topview-container main-background-img " + (props.componentDataToRender == "aboutme" ? "about-me-variant" : "")}>
+            <div className={"topview-container__info " + (props.componentDataToRender == "aboutme" ? "about-me-variant" : "home-page-variant")}>
                 <div className={(props.componentDataToRender == "aboutme") ? "card-box" : "home-page-variant"}>
                     <p className="topview-container__info__header bold">
                         {t(cardBoxesData.header)}
@@ -59,7 +59,7 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
                 <img className="background-1" src="/assets/images/headshotBackgroundTriangles2.png" />
                 <img className="background-2" src="/assets/images/headshotBackgroundTriangles2.png" />
             </div>
-            <IconButton className="go-to-nav-button" onClick={goToNavSection}>
+            <IconButton size="small" className="go-to-nav-button" onClick={goToNavSection}>
                 <KeyboardArrowUpIcon />
             </IconButton>
         </div>

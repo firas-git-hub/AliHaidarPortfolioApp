@@ -49,6 +49,7 @@
                 display: flex;
                 flex-direction: column;
                 row-gap: 3.5rem;
+                width: 100%;
             }
 
             .MuiChip-root {
@@ -81,6 +82,92 @@
                     height: auto;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 975px) {
+    .contact-info {
+        height: auto;
+
+        .contact-info__body {
+            align-items: center;
+            flex-direction: column;
+
+            .contact-info__body__item {
+                width: 100%;
+            }
+        }
+
+        .phone-number-chip {
+            font-size: 0.25rem;
+
+            .MuiAvatar-root {
+                width: auto;
+                height: auto;
+                border-radius: unset;
+            }
+
+            .MuiChip-label {
+                padding-left: unset;
+            }
+
+            img {
+                padding: unset;
+                width: 10rem;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 975px) and (min-width: 401px) {
+    .contact-info {
+        padding: 1rem;
+    }
+
+    .contact-info__header {
+        font-size: 2.5rem !important;
+    }
+    
+    .contact-info__description {
+        font-size: 1.5rem !important;
+        white-space: wrap !important;
+    }
+
+    .MuiChip-label {
+        font-size: 1rem !important;
+    }
+    
+    .phone-number-chip {
+        img {
+            width: 8rem !important;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .contact-info {
+        padding: 0.75rem;
+    }
+
+    .contact-info__header {
+        font-size: 2rem !important;
+        padding-bottom: 0.25rem;
+    }
+
+    .contact-info__description {
+        font-size: 1.125rem !important;
+        white-space: wrap !important;
+    }
+
+    .MuiChip-label {
+        font-size: 0.75rem !important;
+    }
+
+    .phone-number-chip {
+        img {
+            width: 6rem !important;
         }
     }
 }
