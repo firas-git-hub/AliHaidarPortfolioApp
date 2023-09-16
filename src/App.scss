@@ -54,12 +54,7 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
+	height: 100%;
 }
 
 .card-box {
@@ -134,4 +129,16 @@ img {
 .invisible {
 	visibility: hidden;
 	opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+@media (max-width: 975px) {
+	.app-content {
+		height: auto !important;
+	}
 }

@@ -2,7 +2,9 @@ import React from "react";
 import './ContactInfo.scss';
 import { useTranslation } from "react-i18next";
 import data from "../../data/contactInfoData.json";
-import { Avatar, Chip } from "@mui/material";
+import { Avatar, Chip, IconButton } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
+import GoToNavButton from "../../components/go-to-nav-button/GoToNavButton";
 
 export interface IContactInfoProps {
     name: string;
@@ -49,6 +51,7 @@ const ContactInfo: React.FunctionComponent<{}> = () => {
                     </div>
                 </div>
             </div>
+            <GoToNavButton/>
         </div>
     )
 }

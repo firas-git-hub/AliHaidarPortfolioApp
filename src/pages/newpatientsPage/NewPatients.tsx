@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import data from "../../data/newPatientsData.json";
 import JsonParagraphsDataFormatService from "../../services/JsonParagraphsHelper";
 import { JsonParagraphsDataInterface } from "../../interfaces/JsonParagraphsDataInterface";
+import GoToNavButton from "../../components/go-to-nav-button/GoToNavButton";
 
 export interface INewPatientsProps { };
 
@@ -49,6 +50,7 @@ const NewPatients: React.FunctionComponent<INewPatientsProps> = (props) => {
                     })
                 }
             </div>
+            <GoToNavButton/>
         </div>
     )
 }

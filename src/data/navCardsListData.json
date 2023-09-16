@@ -2,37 +2,37 @@
     {
         "cardImagePath": "/assets/icons/home.png",
         "cardHeader": "Home",
-        "cardDescription": "Navigate to the home page and make yourself at home.",
+        "cardDescription": "",
         "routerPath": "/"
     },
     {
         "cardImagePath": "/assets/icons/aboutme256x256.png",
         "cardHeader": "About me",
-        "cardDescription": "Ali Haidar MD",
+        "cardDescription": "",
         "routerPath": "/aboutme"
     },
     {
         "cardImagePath": "/assets/icons/newpatients256x256.png",
         "cardHeader": "New patients",
-        "cardDescription": "Welcome to our clinic's website. Please find the information that you need here.",
+        "cardDescription": "",
         "routerPath": "/newpatients"
     },
     {
         "cardImagePath": "/assets/icons/services256x256.png",
         "cardHeader": "Services",
-        "cardDescription": "Check out the services offered for a better mental health and a better lifestyle.",
+        "cardDescription": "",
         "routerPath": "/services"
     },
     {
         "cardImagePath": "/assets/icons/policiesregulations256x256.png",
         "cardHeader": "Policies and regulations",
-        "cardDescription": "Through this page you will be able to see the policies and regulations we use to make this space and our practice safe for everyoe involved.",
+        "cardDescription": "",
         "routerPath": "/policiesregulations"
     },
     {
         "cardImagePath": "/assets/icons/contactinfo256x256.png",
         "cardHeader": "Contact Info",
-        "cardDescription": "All the info you need to make contact with our clinic. Please reach out in case you have any questions on the communication means provided.",
+        "cardDescription": "",
         "routerPath": "/contactinfo"
     }
 ]

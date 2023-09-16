@@ -55,7 +55,7 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1501px) or (max-height: 750px) {
     .new-patients {
         height: auto !important;
     }
@@ -82,21 +82,8 @@
     }
 }
 
-@media (max-width: 1700px) and (min-width: 1401px) {
-    .new-patients__body {
-        top: 55% !important;
-    }
-}
 
-@media (max-width: 1400px) and (min-width: 1101px) {
-    .new-patients__body {
-        top: 60% !important;
-    }
-}
-
-
-
-@media (max-width: 1100px) and (min-width: 401px) {
+@media (max-width: 1500px) and (min-width: 401px) {
 
     .new-patients {
         padding: 1rem;

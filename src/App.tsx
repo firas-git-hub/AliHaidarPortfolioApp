@@ -1,5 +1,4 @@
 import React, { Component, useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import TopView from './components/top-view/TopView';
 import ClickableCard, { ClickableCardProps } from './components/clickable-card/ClickableCard';

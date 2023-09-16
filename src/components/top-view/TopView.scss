@@ -160,30 +160,14 @@
             justify-self: stretch;
         }
     }
-
-    .go-to-nav-button {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: fit-content;
-        transform: translate(-50%, 0);
-        margin-bottom: 0.1875rem;
-        background-color: #bcdcfb;
-        z-index: 10;
-
-        &:hover {
-            background-color: #cee7ff;
-        }
-    }
 }
 
 @media (max-height: 875px) or (max-width: 1750px) {
     .topview-container.about-me-variant {
-        height: fit-content ;
+        height: fit-content;
         flex-direction: column !important;
 
-        .topview-container__info {
-        }
+        .topview-container__info {}
 
         .differently-sized-boxes {
             height: fit-content;
@@ -212,23 +196,30 @@
     }
 }
 
-@media (max-width: 975px) {
+@media (max-width: 975px) or (max-height: 650px) {
     .topview-container {
         height: auto;
         flex-direction: column !important;
 
         .topview-container__info {
+            padding: 0.75rem;
             width: 100% !important;
             padding-bottom: 2rem;
+        }
+
+        .topview-container__info.home-page-variant {
+            justify-content: start;
         }
 
         .img-container {
             width: 100% !important;
             padding-bottom: 2.75rem !important;
             padding-top: 2rem !important;
+            flex: unset !important;
 
             .portrait-img-container {
-                height: 100% !important;
+                height: 24rem;
+                width: 24rem;
             }
         }
     }
@@ -263,5 +254,11 @@
         .description {
             font-size: 1rem !important;
         }
+    }
+}
+
+@media (max-width: 500px) {
+    .portrait-img-container {
+        height: 100% !important;
     }
 }

@@ -1,12 +1,12 @@
 import "./TopView.scss";
-import React, { ReactNode, useRef } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import homeData from "../../data/topViewCardsData.json";
 import aboutMeData from "../../data/aboutMeData.json";
 import { useTranslation } from "react-i18next";
 import { JsonParagraphsDataInterface } from "../../interfaces/JsonParagraphsDataInterface";
 import JsonParagraphsDataFormatService from "../../services/JsonParagraphsHelper";
 import { IconButton } from "@mui/material";
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import GoToNavButton from "../go-to-nav-button/GoToNavButton";
 
 export interface ITopViewProps {
     componentDataToRender: "home" | "aboutme";
@@ -18,11 +18,26 @@ export interface ITopViewDataProps {
     textContent: JsonParagraphsDataInterface[];
 }
 
+enum topViewImagesPosition {
+    top = "top",
+    bottom = "Bottom"
+}
+
 const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) => {
 
     const { t } = useTranslation();
     let cardBoxesData = props.componentDataToRender == "aboutme" ? aboutMeData : homeData;
     let numberedListItemCounterObj = { index: 0 };
+    let [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return <>
         <div className={"topview-container main-background-img " + (props.componentDataToRender == "aboutme" ? "about-me-variant" : "")}>
@@ -35,6 +50,7 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
                         {t(cardBoxesData.subTitle)}
                     </p>
                 </div>
+                {renderImagesRelevantToWidth(windowWidth, props, topViewImagesPosition.top)}
                 <div className={"differently-sized-boxes" + (props.componentDataToRender == "home" ? " home" : "")}>
                     {
                         cardBoxesData.textContent
@@ -52,6 +68,15 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
                     }
                 </div>
             </div>
+            {renderImagesRelevantToWidth(windowWidth, props, topViewImagesPosition.bottom)}
+            <GoToNavButton />
+        </div>
+    </>
+}
+
+const renderImagesRelevantToWidth = (windowWidth: number, props: ITopViewProps, callerPosition: topViewImagesPosition) => {
+    if (callerPosition == topViewImagesPosition.top && windowWidth <= 975) {
+        return (
             <div className="img-container">
                 <div className="portrait-img-container">
                     <img className="portrait" src={props.componentDataToRender == "home" ? "assets/images/AliHaidarPortrait2.png" : "assets/images/AliHaidarPortrait.png"} />
@@ -59,18 +84,24 @@ const TopView: React.FunctionComponent<ITopViewProps> = (props: ITopViewProps) =
                 <img className="background-1" src="/assets/images/headshotBackgroundTriangles2.png" />
                 <img className="background-2" src="/assets/images/headshotBackgroundTriangles2.png" />
             </div>
-            <IconButton size="small" className="go-to-nav-button" onClick={goToNavSection}>
-                <KeyboardArrowUpIcon />
-            </IconButton>
-        </div>
-    </>
-}
+        )
+    }
 
-const goToNavSection = () => {
-    document.getElementsByClassName("App")[0].scroll({
-        top: document.getElementById("navCards")!.offsetTop,
-        behavior: "smooth"
-    });
+    else if (callerPosition == topViewImagesPosition.bottom && windowWidth > 975) {
+        return (
+            <div className="img-container">
+                <div className="portrait-img-container">
+                    <img className="portrait" src={props.componentDataToRender == "home" ? "assets/images/AliHaidarPortrait2.png" : "assets/images/AliHaidarPortrait.png"} />
+                </div>
+                <img className="background-1" src="/assets/images/headshotBackgroundTriangles2.png" />
+                <img className="background-2" src="/assets/images/headshotBackgroundTriangles2.png" />
+            </div>
+        )
+    }
+
+    else {
+       return <></>
+    }
 }
 
 export default TopView;

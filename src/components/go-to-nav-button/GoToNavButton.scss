@@ -1,0 +1,27 @@
+.go-to-nav-button {
+	position: absolute !important;
+    color: white !important;
+	top: 0;
+	left: 0;
+	width: fit-content !important;
+	margin-bottom: 0.1875rem;
+	background-color: #007ffb !important;
+	z-index: 10;
+	margin: 1rem !important;
+	border-radius: 0.5rem !important;
+
+	&:hover {
+		background-color: #1e8eff;
+	}
+
+	& .MuiTouchRipple-child {
+		border-radius: inherit !important;
+	}
+}
+
+@media (max-width: 1100px) {
+	.go-to-nav-button {
+		left: unset !important;
+		right: 0 !important;
+	}
+}

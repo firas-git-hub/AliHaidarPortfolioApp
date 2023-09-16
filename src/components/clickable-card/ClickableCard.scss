@@ -19,8 +19,8 @@
     }
 
     .card-image {
-        width: 11rem;
-        height: 11rem;
+        width: 7rem;
+        height: 7rem;
         align-self: center;
 
         img {
@@ -55,13 +55,14 @@
     }
 
     .card-content * {
-        font-size: unset !important;
+        font-size: x-large !important;
     }
 }
 
 @media (max-width: 400px) {
     .card-content * {
         padding: 0.5rem !important;
+        font-size: large !important;
     }
 
     .card-image {

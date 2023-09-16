@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import data from "../../data/policiesRegulationsData.json";
 import JsonParagraphsDataFormatService from "../../services/JsonParagraphsHelper";
 import { JsonParagraphsDataInterface } from "../../interfaces/JsonParagraphsDataInterface";
+import GoToNavButton from "../../components/go-to-nav-button/GoToNavButton";
 
 export interface IPoliciesRegulationsProps { };
 
@@ -41,6 +42,7 @@ const PoliciesRegulations: React.FunctionComponent<IPoliciesRegulationsProps> = 
                     })
                 }
             </div>
+            <GoToNavButton/>
         </div>
     )
 }
