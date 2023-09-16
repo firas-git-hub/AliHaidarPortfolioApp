@@ -57,15 +57,22 @@
                 width: fit-content;
                 align-self: center;
                 background-color: #bde1ff;
+                height: auto;
+                border-radius: 2rem;
+                padding-block: 0.25rem;
             }
 
             .MuiChip-label {
                 font-size: 1.125rem;
                 font-weight: bold;
+                overflow: unset;
+                white-space: break-spaces;
+                text-overflow: unset;
             }
 
             .phone-number-chip {
                 font-size: 0.25rem;
+                padding-block: unset;
 
                 .MuiAvatar-root {
                     width: auto;
@@ -79,7 +86,7 @@
 
                 img {
                     padding: unset;
-                    width: 10rem;
+                    width: 9rem;
                     height: auto;
                 }
             }
