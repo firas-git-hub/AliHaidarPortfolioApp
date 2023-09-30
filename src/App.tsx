@@ -12,10 +12,11 @@ import { useNavigate } from "react-router-dom";
 import NewPatients from './pages/newpatientsPage/NewPatients';
 import { IconButton } from '@mui/material';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import { Analytics } from '@vercel/analytics/react';
-
+import { inject as injectVercel } from "@vercel/analytics"
 
 function App() {
+
+	injectVercel();
 
 	const [scrollToTopVisibility, setScrollToTopVisibility] = useState(false);
 	const toggleVisible = () => {
@@ -43,34 +44,31 @@ function App() {
 	});
 
 	return (
-		<>
-			<div className="App">
-				<Routes>
-					<Route path="/*" element={<NotFound />} />
-					<Route path="/" element={<TopView componentDataToRender="home" />} />
-					<Route path="/aboutme" element={<TopView componentDataToRender="aboutme" />} />
-					<Route path="/contactinfo" element={<ContactInfo />} />
-					<Route path="/services" element={<ServicesPage />} />
-					<Route path="/policiesregulations" element={<PoliciesRegulations />} />
-					<Route path="/newpatients" element={<NewPatients />} />
-				</Routes>
-				<div className="app-content" id="navCards">
-					{navCardsList.map((navCard: ClickableCardProps, index) =>
-						<ClickableCard
-							key={index}
-							cardDescription={navCard.cardDescription}
-							cardHeader={navCard.cardHeader}
-							cardImagePath={navCard.cardImagePath}
-							navigateOnClick={navCard.navigateOnClick}
-						></ClickableCard>
-					)}
-				</div>
-				<IconButton size="small" className={"back-to-top-button " + (scrollToTopVisibility ? "" : "invisible")} onClick={scrollToTop}>
-					<KeyboardDoubleArrowUpIcon />
-				</IconButton>
+		<div className="App">
+			<Routes>
+				<Route path="/*" element={<NotFound />} />
+				<Route path="/" element={<TopView componentDataToRender="home" />} />
+				<Route path="/aboutme" element={<TopView componentDataToRender="aboutme" />} />
+				<Route path="/contactinfo" element={<ContactInfo />} />
+				<Route path="/services" element={<ServicesPage />} />
+				<Route path="/policiesregulations" element={<PoliciesRegulations />} />
+				<Route path="/newpatients" element={<NewPatients />} />
+			</Routes>
+			<div className="app-content" id="navCards">
+				{navCardsList.map((navCard: ClickableCardProps, index) =>
+					<ClickableCard
+						key={index}
+						cardDescription={navCard.cardDescription}
+						cardHeader={navCard.cardHeader}
+						cardImagePath={navCard.cardImagePath}
+						navigateOnClick={navCard.navigateOnClick}
+					></ClickableCard>
+				)}
 			</div>
-			<Analytics />
-		</>
+			<IconButton size="small" className={"back-to-top-button " + (scrollToTopVisibility ? "" : "invisible")} onClick={scrollToTop}>
+				<KeyboardDoubleArrowUpIcon />
+			</IconButton>
+		</div>
 	);
 }
 
